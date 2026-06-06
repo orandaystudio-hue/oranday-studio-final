@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <title>Oranday Studio — Isotipo / Logo compacto (sello)</title>
+  <rect x="20" y="20" width="360" height="360" rx="6" fill="#F5F1EA" stroke="#0E1116" stroke-width="2"/>
+  <rect x="34" y="34" width="332" height="332" rx="3" fill="none" stroke="#0E1116" stroke-width="0.6" opacity="0.35"/>
+  <g transform="translate(200 170)">
+    <circle cx="0" cy="0" r="82" fill="none" stroke="#1F4D3F" stroke-width="16"/>
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#1F4D3F" stroke-width="4.5" opacity="0.45"/>
+    <circle cx="0" cy="-82" r="10" fill="#B89968"/>
+    <circle cx="0" cy="-82" r="3" fill="#F5F1EA"/>
+  </g>
+  <text x="200" y="330" text-anchor="middle"
+        font-family="'Inter','Helvetica Neue',Arial,sans-serif"
+        font-weight="600" font-size="17" letter-spacing="8" fill="#0E1116">ORANDAY STUDIO</text>
+</svg>

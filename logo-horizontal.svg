@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 260" width="960" height="260">
+  <title>Oranday Studio — Logo horizontal</title>
+  <!-- Isotipo -->
+  <g transform="translate(130 130)">
+    <circle cx="0" cy="0" r="78" fill="none" stroke="#1F4D3F" stroke-width="15"/>
+    <circle cx="0" cy="0" r="38" fill="none" stroke="#1F4D3F" stroke-width="4" opacity="0.45"/>
+    <circle cx="0" cy="-78" r="9" fill="#B89968"/>
+    <circle cx="0" cy="-78" r="2.8" fill="#F5F1EA"/>
+  </g>
+  <!-- Divisor -->
+  <line x1="250" y1="70" x2="250" y2="190" stroke="#0E1116" stroke-width="1" opacity="0.35"/>
+  <!-- Wordmark -->
+  <text x="285" y="138"
+        font-family="'Fraunces','Cormorant Garamond','Playfair Display',Georgia,serif"
+        font-weight="500" font-size="84" letter-spacing="4" fill="#0E1116">ORANDAY</text>
+  <text x="288" y="180"
+        font-family="'Inter','Helvetica Neue',Arial,sans-serif"
+        font-weight="600" font-size="22" letter-spacing="16" fill="#4A5560">STUDIO</text>
+</svg>
