@@ -1,0 +1,31 @@
+{
+  "name": "Oranday Studio",
+  "short_name": "Oranday",
+  "description": "Diseñamos identidad, páginas web y tiendas Shopify para negocios que viven de la confianza.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F5F1EA",
+  "theme_color": "#1F4D3F",
+  "lang": "es-MX",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
