@@ -149,8 +149,8 @@ h3 { font-size: clamp(1.18rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
 }
 .hero-eyebrow { display: flex; align-items: center; gap: .62rem; margin-bottom: 1.6rem; }
 .signal-dot { display: inline-block; inline-size: .54rem; block-size: .54rem; border-radius: 50%; background: var(--orange); }
-.hero h1 { font-size: clamp(3.15rem, 6.15vw, 6.25rem); text-wrap: initial; }
-.hero h1 em { color: var(--green); font-style: normal; }
+.hero h1 { font-size: clamp(2.55rem, 5.65vw, 5.7rem); text-wrap: initial; }
+.hero h1 em { color: var(--green); font-style: normal; white-space: nowrap; }
 .hero .lead { margin-top: 1.45rem; max-width: 33rem; color: var(--muted); }
 .hero .lead strong { color: var(--ink); }
 .hero-actions { margin-top: 1.55rem; }
@@ -225,6 +225,18 @@ h3 { font-size: clamp(1.18rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
 .sector-card h3 { margin-top: .8rem; font-size: clamp(1.6rem, 3vw, 2.45rem); }
 .sector-card p { margin: .65rem 0 .9rem; max-width: 29rem; color: var(--muted); }
 .sector-card .text-link { margin-top: auto; }
+
+.inner-grid.service-grid { margin-top: 0; }
+.service-card { display: flex; flex-direction: column; align-items: flex-start; }
+.service-card .eyebrow { margin-bottom: .85rem; color: var(--green); }
+.service-card p:not(.eyebrow) { margin-bottom: .8rem; }
+.service-card .text-link { margin-top: auto; }
+.service-card.service-ai { background: var(--ink); color: var(--paper); border-color: var(--ink); border-top-color: var(--orange); }
+.service-ai .eyebrow { color: #ff9c7d; }
+.service-card.service-ai p:not(.eyebrow), .service-ai .text-link { color: #e1e9dd; }
+.service-ai .text-link:hover { color: var(--paper); }
+.service-ai :focus-visible { outline-color: var(--orange); }
+.examples-section { border-top: 1px solid var(--line); }
 
 .demo-section { background: var(--wash); border-block: 1px solid var(--line); }
 .demo-full-link { margin-top: 1rem; }
@@ -327,7 +339,7 @@ h3 { font-size: clamp(1.18rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
 
 @media (max-width: 900px) {
   .hero { column-gap: 1.65rem; }
-  .hero h1 { font-size: clamp(2.8rem, 6.05vw, 4.2rem); }
+  .hero h1 { font-size: clamp(2.5rem, 5.65vw, 4.1rem); }
   .site-nav { gap: .95rem; }
   .flow-inner { flex-wrap: wrap; justify-content: flex-start; padding-block: 1rem; }
 }
@@ -338,7 +350,7 @@ h3 { font-size: clamp(1.18rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
   .site-nav { grid-column: 1 / -1; justify-content: space-between; gap: .35rem 1rem; margin-top: .4rem; border-top: 1px solid var(--line); }
   .site-nav a { font-size: .84rem; }
   .hero { grid-template-columns: minmax(0, 1fr); gap: 1.55rem; padding-top: 2.45rem; }
-  .hero h1 { font-size: clamp(2.75rem, 9.65vw, 4.85rem); }
+  .hero h1 { font-size: clamp(2.25rem, 9.2vw, 4.2rem); }
   .hero-eyebrow { margin-bottom: .85rem; }
   .hero .lead { margin-top: .95rem; }
   .hero-actions { margin-top: 1.05rem; }

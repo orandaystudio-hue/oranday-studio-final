@@ -1,6 +1,6 @@
 # Oranday Studio
 
-Sitio estático en español de México para empresas de climatización y paneles solares de Monterrey. Vercel sirve los archivos desde la raíz del repositorio. No requiere compilación ni dependencias de JavaScript.
+Sitio estático en español de México para un estudio de diseño web, posicionamiento y automatización con IA en Monterrey. Vercel sirve los archivos desde la raíz del repositorio. No requiere compilación ni dependencias de JavaScript.
 
 ## Vista local
 
@@ -8,13 +8,14 @@ Sitio estático en español de México para empresas de climatización y paneles
 python -m http.server 8765 --bind 127.0.0.1
 ```
 
-Abre `http://127.0.0.1:8765/`. La demo está integrada en la portada y también abre como página independiente en `/demo/`. El parámetro `giro=climas` o `giro=solar` selecciona el ejemplo inicial. Los datos son simulados y los controles emiten `oranday:demo` dentro del navegador.
+Abre `http://127.0.0.1:8765/`. La demo está integrada en la portada y también abre como página independiente en `/demo/`. El parámetro `giro=servicios`, `giro=climas` o `giro=solar` selecciona el ejemplo inicial. Los datos son simulados y los controles emiten `oranday:demo` dentro del navegador.
 
 ## Datos estructurados
 
 | Ruta | JSON-LD |
 | --- | --- |
 | `/` | Organization, WebSite y WebPage |
+| `/diseno-web-posicionamiento/`, `/captacion-seguimiento-comercial/` y `/automatizacion-ia/` | WebPage, Service y BreadcrumbList |
 | `/captacion-climatizacion-monterrey/` | WebPage, Service y BreadcrumbList |
 | `/captacion-paneles-solares-monterrey/` | WebPage, Service y BreadcrumbList |
 | `/demo/` | WebPage, LearningResource y BreadcrumbList |
@@ -22,7 +23,7 @@ Abre `http://127.0.0.1:8765/`. La demo está integrada en la portada y también 
 | `/aviso-de-privacidad/` | WebPage y BreadcrumbList |
 | `/brand-system.html` | WebPage |
 
-Los tipos Service describen la captación y el seguimiento que Oranday presta a los instaladores. Los ejemplos de la demo son ficticios. Las preguntas frecuentes se mantienen como contenido visible.
+Los tipos Service describen los servicios que Oranday presta a sus clientes. Los ejemplos de la demo son ficticios. Las preguntas frecuentes se mantienen como contenido visible.
 
 ## Operación
 

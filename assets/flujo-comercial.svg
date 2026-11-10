@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="570" viewBox="0 0 760 570" fill="none">
+  <title>De la consulta al equipo comercial</title>
+  <desc>Una página genera una consulta. La IA sugiere una clasificación y un borrador. Una persona revisa y decide el siguiente paso.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#2E4A43" stroke-opacity=".53"/>
+    </pattern>
+    <linearGradient id="panel" x2="0" y2="1">
+      <stop stop-color="#26443C"/>
+      <stop offset="1" stop-color="#1D332E"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="m2 1 4 3-4 3" stroke="#FF895F" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <path fill="#172725" d="M0 0h760v570H0z"/>
+  <path fill="url(#grid)" d="M18 18h724v534H18z"/>
+  <path d="M23 48V23h25m664 0h25v25M23 522v25h25m664 0h25v-25" stroke="#789489"/>
+  <g font-family="monospace" font-size="12" letter-spacing="2" fill="#D4E2D4">
+    <text x="43" y="53">ORANDAY STUDIO</text>
+    <text x="719" y="53" text-anchor="end">PLANO 01 / MTY</text>
+    <text x="43" y="522">ENTRADA → PROCESO → ACCIÓN</text>
+    <text x="719" y="522" text-anchor="end">MONTERREY, N.L.</text>
+  </g>
+  <path d="M251 202h48c22 0 32 12 32 34v28m113 68h42c23 0 33-13 33-35v-15" stroke="#FF895F" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M171 273v104c0 24 13 36 37 36h66m300-119v77c0 23-13 35-37 35h-70" stroke="#88A799" stroke-dasharray="5 6" stroke-opacity=".7"/>
+  <circle cx="171" cy="273" r="4" fill="#FF895F"/>
+  <circle cx="574" cy="294" r="4" fill="#FF895F"/>
+  <path d="M274 408v10m193-17v10" stroke="#B1C7B6"/>
+  <g font-family="monospace" font-size="12" letter-spacing="1.4">
+    <rect x="62" y="122" width="201" height="145" rx="5" fill="url(#panel)" stroke="#76958A"/>
+    <path d="M63 150h199" stroke="#76958A"/>
+    <circle cx="79" cy="137" r="2.5" fill="#FF895F"/>
+    <circle cx="89" cy="137" r="2.5" fill="#76958A"/>
+    <text x="247" y="142" text-anchor="end" fill="#D4E2D4">01 / ENTRADA</text>
+    <rect x="81" y="169" width="39" height="33" rx="4" stroke="#CFE5D4"/>
+    <path d="M88 193v-9l7 5 8-10 9 5v9H88z" fill="#76958A"/>
+    <path d="M134 176h92m-92 11h69m-69 11h81" stroke="#A2BDAF"/>
+    <rect x="81" y="222" width="163" height="25" rx="2" fill="#F8F3E8"/>
+    <text x="162" y="239" text-anchor="middle" fill="#172725">NUEVA CONSULTA</text>
+
+    <rect x="278" y="261" width="181" height="131" rx="5" fill="#253D36" stroke="#FF895F"/>
+    <path d="M279 291h179" stroke="#AE765E"/>
+    <text x="296" y="281" fill="#FFC1A9">02 / ASISTENTE IA</text>
+    <path d="M314 311l4 12 12 4-12 4-4 12-4-12-12-4 12-4 4-12z" stroke="#FFB298"/>
+    <path d="M341 319h99m-99 11h82m-82 11h91" stroke="#A2BDAF"/>
+    <text x="298" y="371" fill="#D4E2D4">CLASIFICA + SUGIERE</text>
+
+    <rect x="502" y="120" width="199" height="171" rx="5" fill="url(#panel)" stroke="#76958A"/>
+    <path d="M503 149h197" stroke="#76958A"/>
+    <circle cx="520" cy="135" r="3" fill="#FF895F"/>
+    <text x="685" y="140" text-anchor="end" fill="#D4E2D4">03 / TU EQUIPO</text>
+    <rect x="519" y="168" width="165" height="32" rx="3" fill="#294C40" stroke="#76958A"/>
+    <path d="m530 184 4 4 7-8" stroke="#D4E2D4" stroke-width="2" stroke-linecap="round"/>
+    <text x="550" y="189" fill="#E3EFE2">REVISAR</text>
+    <rect x="519" y="209" width="165" height="32" rx="3" fill="#294C40" stroke="#76958A"/>
+    <path d="M531 224h10m-5-5v10" stroke="#FFAD8F" stroke-width="2" stroke-linecap="round"/>
+    <text x="550" y="230" fill="#E3EFE2">ASIGNAR TAREA</text>
+    <path d="M519 259h119m-119 10h87" stroke="#88A799"/>
+
+    <rect x="264" y="437" width="232" height="31" rx="2" fill="#213B34" stroke="#55796A"/>
+    <circle cx="282" cy="452.5" r="3.5" fill="#FF895F"/>
+    <text x="298" y="457" fill="#D4E2D4">SIGUIENTE PASO DEFINIDO</text>
+  </g>
+</svg>

@@ -103,6 +103,7 @@
   align-items: center;
   gap: 8px;
   width: 100%;
+  height: 100%;
   padding: 8px clamp(8px, 1.6vw, 14px);
   border: 1px solid var(--flow-line);
   border-radius: 6px;
@@ -213,6 +214,12 @@
   background: #dfede2;
 }
 
+.flow-demo-message-team[data-draft] {
+  border-style: dashed;
+  border-color: #9a5d45;
+  background: #f8ede0;
+}
+
 .flow-demo .flow-demo-message-role {
   margin-bottom: 4px;
 }
@@ -313,7 +320,8 @@
   white-space: nowrap;
 }
 
-.flow-demo [data-demo-controls][hidden] {
+.flow-demo [data-demo-controls][hidden],
+.flow-demo [data-demo-ai-field][hidden] {
   display: none;
 }
 
@@ -348,5 +356,28 @@
 
   .flow-demo-messages {
     min-height: 0;
+  }
+}
+
+@media (max-width: 470px) {
+  .flow-demo-sectors {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .flow-demo-sectors button {
+    padding-inline: 5px;
+    font-size: .82rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .flow-demo-sectors {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flow-demo-sectors button:first-child {
+    grid-column: 1 / -1;
   }
 }
