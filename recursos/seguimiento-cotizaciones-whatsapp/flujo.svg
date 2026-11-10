@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <title>Recorrido de una cotización por WhatsApp</title>
+  <desc>Cuatro etapas conectadas: consulta, calificación, cotización y seguimiento.</desc>
+  <rect width="1200" height="630" fill="#F8F3E8"/>
+  <path d="M70 64h1060M70 562h1060" fill="none" stroke="#172725" stroke-opacity=".32"/>
+  <g fill="#172725" font-family="Arial, sans-serif">
+    <text x="70" y="118" font-size="22" font-weight="700" letter-spacing="4">ORANDAY STUDIO / GUÍA PRÁCTICA</text>
+    <text x="70" y="222" font-size="67" font-weight="700" letter-spacing="-2">El recorrido de una cotización</text>
+  </g>
+  <path d="M166 391h868" fill="none" stroke="#145D56" stroke-width="3"/>
+  <g fill="#172725" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700">
+    <g transform="translate(166 391)">
+      <circle r="43" fill="#FF6B3D"/>
+      <text y="9" font-size="24">01</text>
+      <text y="94" font-size="27">Consulta</text>
+    </g>
+    <g transform="translate(455 391)">
+      <circle r="43" fill="#F8F3E8" stroke="#145D56" stroke-width="3"/>
+      <text y="9" font-size="24">02</text>
+      <text y="94" font-size="27">Calificación</text>
+    </g>
+    <g transform="translate(745 391)">
+      <circle r="43" fill="#F8F3E8" stroke="#145D56" stroke-width="3"/>
+      <text y="9" font-size="24">03</text>
+      <text y="94" font-size="27">Cotización</text>
+    </g>
+    <g transform="translate(1034 391)">
+      <circle r="43" fill="#F8F3E8" stroke="#145D56" stroke-width="3"/>
+      <text y="9" font-size="24">04</text>
+      <text y="94" font-size="27">Seguimiento</text>
+    </g>
+  </g>
+</svg>

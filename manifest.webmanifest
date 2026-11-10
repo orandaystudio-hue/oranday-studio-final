@@ -1,12 +1,12 @@
 {
   "name": "Oranday Studio",
   "short_name": "Oranday",
-  "description": "Diseñamos identidad, páginas web y tiendas Shopify para negocios que viven de la confianza.",
+  "description": "Captación y seguimiento para empresas de climatización y paneles solares en Monterrey.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#F5F1EA",
-  "theme_color": "#1F4D3F",
+  "background_color": "#F8F3E8",
+  "theme_color": "#172725",
   "lang": "es-MX",
   "icons": [
     {
@@ -20,12 +20,6 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
-    },
-    {
-      "src": "/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
     }
   ]
 }

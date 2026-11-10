@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <title>Oranday Studio</title>
+  <rect width="192" height="192" rx="28" fill="#F8F3E8"/>
+  <g transform="translate(24 24) scale(3)">
+    <path fill="#172725" d="M29 5H15L5 15v18l10 10h18l10-10V19l-7 7v4l-6 6H18l-6-6V18l6-6h4z"/>
+    <path fill="#FF6B3D" d="M36 6h6v6l-8 8-6-6z"/>
+  </g>
+</svg>
