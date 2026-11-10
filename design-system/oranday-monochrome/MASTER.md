@@ -40,3 +40,14 @@ Inter is served locally with swap. Headings use 500 weight and tight tracking; b
 - https://fin.ai/ — showing workflow capabilities through concrete examples.
 
 These are design references, not evidence that the redesign has a proven conversion uplift. Original layout, assets and copy were implemented for Oranday.
+
+## 21st.dev refinement
+
+The user supplied https://21st.dev/ as the new component reference. Selected components were inspected on 2026-11-10.
+
+- Lamp by Manu Arora: https://21st.dev/@manuarora700/components/lamp . Visual reference for the original silver halo and entry light in `refinements.css`. Its account-gated implementation was not copied.
+- Spotlight by Julien Thibeaut: https://21st.dev/@ibelick/components/spotlight/border-only . Visual reference for the original pointer-driven silver card border in `refinements.css` and `refinements.js`. A keyboard focus treatment is equivalent; coarse pointers and reduced-motion skip tracking. No gated component source was retrieved.
+- Animated Features Bento by Kedhareswer Naidu: https://21st.dev/@kedhareswer/components/ink-orbit-features . Layout reference for an original featured automation diagram and two secondary service cards. No source was copied.
+- Animated Beam by Dillion Verma / Magic UI: https://21st.dev/@dillionverma/components/animated-beam . The public upstream measured-element SVG geometry is adapted in `beams.js`/`beams.css`. Full MIT attribution is in `THIRD_PARTY_NOTICES.md`. Beams share the demo state, pause and reduced-motion behavior.
+
+These are HTML/CSS/JS adaptations for the existing static site. They do not introduce a React build, new runtime dependencies or an external component service.

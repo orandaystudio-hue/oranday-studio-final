@@ -24,8 +24,12 @@
   <link rel="preload" href="/assets/inter.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/experience.css">
+  <link rel="stylesheet" href="/beams.css">
+  <link rel="stylesheet" href="/refinements.css">
   <script src="/script.js" defer></script>
   <script src="/experience.js" defer></script>
+  <script src="/beams.js" defer></script>
+  <script src="/refinements.js" defer></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -72,7 +76,7 @@
     </div>
   </header>
   <main id="contenido">
-    <section class="home-hero" aria-labelledby="hero-title">
+    <section class="home-hero" aria-labelledby="hero-title"><div class="hero-lamp" aria-hidden="true"><div class="hero-lamp-halo"></div><div class="hero-lamp-ray"></div></div>
       <div class="wrap">
         <div class="hero-intro">
           <p class="hero-label"><i aria-hidden="true"></i> DISEÑO WEB + INTELIGENCIA ARTIFICIAL</p>
@@ -166,21 +170,37 @@
           <div><p class="eyebrow">01 / Lo que podemos construir</p><h2 id="solutions-title">Haz que todo<br><span>trabaje mejor, junto.</span></h2></div>
           <p>Tu página, tus consultas y tu operación pueden estar conectadas. Empezamos donde tu negocio más lo necesita.</p>
         </div>
-        <div class="solution-grid">
-          <article class="solution-card">
+        <div class="solution-grid solution-bento">
+          <article class="solution-card solution-featured">
+  <div class="solution-copy"><p class="eyebrow">Automatización + IA</p><h3>Tu operación.<br>Conectada con IA.</h3><p>Consultas, documentos y tareas conectadas en un flujo a tu medida. La IA organiza y prepara. Tu equipo decide lo importante.</p></div>
+  <div class="automation-canvas" role="img" aria-label="Ejemplo de automatización. Web, mensajes y documentos pasan por IA para preparar respuestas, registrar consultas y crear tareas, con revisión humana.">
+    <div class="automation-grid" aria-hidden="true">
+      <div class="automation-io">
+        <span class="automation-chip"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18"/></svg> Tu web</span>
+        <span class="automation-chip"><svg viewBox="0 0 24 24"><path d="M21 11a8 8 0 0 1-8 8H7l-4 3V11a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8Z"/><path d="M7 10h10M7 14h6"/></svg> Mensajes</span>
+        <span class="automation-chip"><svg viewBox="0 0 24 24"><path d="M14 3H5v18h14V8Z"/><path d="M14 3v5h5M8 12h8M8 16h5"/></svg> Documentos</span>
+      </div>
+      <span class="automation-core"><svg viewBox="0 0 48 48"><path d="M24 5v12M24 31v12M5 24h12M31 24h12M10 10l9 9M29 29l9 9M10 38l9-9M29 19l9-9"/><circle cx="24" cy="24" r="5"/></svg></span>
+      <div class="automation-io">
+        <span class="automation-chip"><svg viewBox="0 0 24 24"><path d="M8 5 3 10l5 5M3 10h11a7 7 0 0 1 7 7v3"/></svg> Respuestas</span>
+        <span class="automation-chip"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 9v12"/></svg> Tu CRM</span>
+        <span class="automation-chip"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 11h18m-11 5 2 2 4-4"/></svg> Tareas</span>
+      </div>
+    </div>
+    <p class="automation-caption" aria-hidden="true">Información dispersa. <span>Un flujo conectado.</span></p>
+    <span class="automation-review" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg> Con revisión de tu equipo</span>
+  </div>
+  <a class="text-link" href="/automatizacion-ia/">Descubrir qué automatizar <span class="link-arrow" aria-hidden="true">→</span></a>
+</article>
+<article class="solution-card">
             <div class="solution-copy"><p class="eyebrow">Diseño + posicionamiento</p><h3>Una web a la altura de tu negocio.</h3><p>Landing pages y sitios rápidos, claros y preparados para que te encuentren y den el siguiente paso.</p></div>
             <div class="mini-scene" aria-hidden="true"><div class="mini-browser"><div class="mini-browser-top"><i></i><i></i><i></i><span>tu-negocio.mx</span></div><div class="mini-browser-body"><div class="mini-title"></div><div class="mini-title short"></div><div class="mini-line"></div><div class="mini-line short"></div><span class="mini-cta"></span></div></div><div class="mini-score"><span>↗</span> De visita a consulta</div></div>
             <a class="text-link" href="/diseno-web-posicionamiento/">Explorar diseño web <span class="link-arrow" aria-hidden="true">→</span></a>
           </article>
-          <article class="solution-card">
+<article class="solution-card">
             <div class="solution-copy"><p class="eyebrow">Captación + seguimiento</p><h3>Cada consulta, en su lugar.</h3><p>Conecta WhatsApp, formularios y un CRM sencillo. Cada oportunidad con contexto, responsable y próxima acción.</p></div>
             <div class="mini-scene" aria-hidden="true"><div class="mini-board"><div class="mini-column"><span>Consulta</span><div class="mini-lead">Nueva solicitud<i></i></div><div class="mini-lead fade">Por contactar<i></i></div></div><div class="mini-column"><span>Cotización</span><div class="mini-lead">Propuesta lista<i></i></div></div><div class="mini-column"><span>Seguimiento</span><div class="mini-lead">Retomar mañana<i></i></div></div></div></div>
             <a class="text-link" href="/captacion-seguimiento-comercial/">Ordenar mi seguimiento <span class="link-arrow" aria-hidden="true">→</span></a>
-          </article>
-          <article class="solution-card">
-            <div class="solution-copy"><p class="eyebrow">Automatización + IA</p><h3>Menos tareas.<br>Más posibilidades.</h3><p>Flujos a medida que organizan información, preparan respuestas y conectan tus herramientas con supervisión humana.</p></div>
-            <div class="mini-scene" aria-hidden="true"><div class="mini-nodes"><span class="mini-node n1"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 6 9 7 9-7"/></svg></span><span class="mini-node n2"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 2v6M12 16v6M2 12h6M16 12h6M5 5l4 4M15 15l4 4M5 19l4-4M15 9l4-4"/><circle cx="12" cy="12" r="3"/></svg></span><span class="mini-node n3"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span><span class="mini-node-caption">Consulta → contexto → acción</span></div></div>
-            <a class="text-link" href="/automatizacion-ia/">Descubrir qué automatizar <span class="link-arrow" aria-hidden="true">→</span></a>
           </article>
         </div>
       </div>
