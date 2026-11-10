@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Demo de seguimiento comercial con IA | Oranday Studio</title>
   <meta name="description" content="Simula una consulta de servicios con IA y revisión humana, o recorre los ejemplos de climatización y paneles solares desde WhatsApp hasta el seguimiento.">
-  <meta name="theme-color" content="#172725">
+  <meta name="theme-color" content="#08090b">
   <link rel="canonical" href="https://orandaystudio.com/demo/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_MX">
@@ -17,9 +17,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/demo.css">
+  <link rel="stylesheet" href="/experience.css">
   <script src="/script.js" defer></script>
-  <script src="/demo.js" defer></script>
+  <script src="/experience.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,7 +40,7 @@
         "@id": "https://orandaystudio.com/demo/#simulacion",
         "name": "Una consulta en cuatro pasos",
         "url": "https://orandaystudio.com/demo/#simulacion",
-        "description": "Simulación con datos ficticios de consulta, revisión humana o visita, cotización y seguimiento para servicios con IA, climatización y paneles solares.",
+        "description": "Simulación con datos ficticios de consulta, organización con IA, revisión humana y seguimiento para servicios con IA, climatización y paneles solares.",
         "learningResourceType": "Simulación interactiva",
         "inLanguage": "es-MX",
         "creator": {"@id": "https://orandaystudio.com/#organization"}
@@ -57,121 +57,83 @@
   }
   </script>
 </head>
-<body>
+<body class="inner-page">
   <a class="skip-link" href="#contenido">Ir al contenido</a>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="wordmark" href="/" aria-label="Oranday Studio, inicio"><img src="/assets/mark.svg" width="37" height="37" alt=""><span>Oranday <span class="wordmark-sub">Studio</span></span></a>
-      <nav class="site-nav" aria-label="Navegación principal">
-        <a href="/#servicios">Servicios</a>
-        <a href="/#proceso">Proceso</a>
-        <a href="/demo/" aria-current="page">Demo</a>
-      </nav>
-      <a class="button button-primary" href="https://wa.me/528132379135?text=Hola%2C%20Diego.%20Quiero%20revisar%20c%C3%B3mo%20damos%20seguimiento%20a%20nuestras%20cotizaciones." data-contact="whatsapp" data-placement="demo-header">Pedir diagnóstico <span aria-hidden="true">↗</span></a>
+  <header class="site-header"><div class="wrap header-inner">
+    <a class="wordmark" href="/" aria-label="Oranday Studio, inicio"><span>oranday <span class="wordmark-sub">studio</span></span></a>
+    <nav class="site-nav" aria-label="Navegación principal"><a href="/#servicios">Soluciones</a><a href="/demo/" aria-current="page">En acción</a><a href="/#proceso">Proceso</a></nav>
+    <a class="button button-primary" href="/#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+  </div></header>
+  <main id="contenido">
+    <div class="wrap breadcrumbs"><a href="/">Inicio</a><span aria-hidden="true">/</span><span>Demo interactiva</span></div>
+    <section class="inner-hero"><div class="wrap"><p class="eyebrow">La idea, en movimiento</p><h1>Una consulta.<br>Todo conectado.</h1><p class="lead">Elige un negocio y sigue el recorrido. De un mensaje a una respuesta revisada, con la próxima acción lista para tu equipo.</p></div></section>
+    <section class="section wrap" aria-label="Demostración interactiva"><div class="experience" id="simulacion" data-experience data-stage="0">
+  <div class="experience-toolbar">
+    <p class="experience-caption"><span class="experience-dot" aria-hidden="true"></span> Demo interactiva <span class="experience-caption-detail">· datos ficticios</span></p>
+    <div class="experience-sectors" role="group" aria-label="Elige un ejemplo de negocio" data-experience-controls hidden>
+      <button type="button" data-experience-sector="servicios" aria-pressed="true">Servicios</button>
+      <button type="button" data-experience-sector="climas" aria-pressed="false">Climas</button>
+      <button type="button" data-experience-sector="solar" aria-pressed="false">Solar</button>
     </div>
-  </header>
-  <main id="contenido" class="inner-page">
-    <section class="inner-hero">
-      <div class="wrap">
-        <nav class="breadcrumbs" aria-label="Ruta de navegación">
-          <a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Demostración</span>
-        </nav>
-        <p class="eyebrow">Demo interactiva · Monterrey, N.L.</p>
-        <h1>Del primer WhatsApp al seguimiento comercial.</h1>
-        <p class="lead">Ve cómo la IA puede clasificar una consulta de servicios y sugerir un borrador para que lo revise tu equipo. También puedes recorrer los ejemplos de climatización y paneles solares.</p>
+  </div>
+  <div class="experience-scene">
+    <div class="experience-grid" aria-hidden="true"></div>
+    <div class="experience-inbox">
+      <p class="experience-overline">01 / UNA NUEVA OPORTUNIDAD</p>
+      <div class="experience-source-list" aria-label="Canales de entrada">
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg> Google</span>
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M7 6.5h.1M10 6.5h.1"/></svg> Tu web</span>
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5A8.5 8.5 0 0 1 12.5 20a10 10 0 0 1-4-.9L3 21l1.9-5.5a10 10 0 0 1-.9-4A8.5 8.5 0 0 1 12.5 3h.5a8.5 8.5 0 0 1 8 8v.5Z"/></svg> WhatsApp</span>
       </div>
-    </section>
-    <section id="simulacion" class="section">
-      <div class="wrap">
-        <h2>Una consulta en cuatro pasos</h2>
-        <div class="flow-demo" data-demo>
-          <div class="flow-demo-top">
-            <p class="flow-demo-tag"><span aria-hidden="true"></span> Simulación comercial</p>
-            <div class="flow-demo-sectors" role="group" aria-label="Ejemplo de la demostración" data-demo-controls hidden>
-              <button type="button" data-demo-sector="servicios" aria-pressed="true">Servicios + IA</button>
-              <button type="button" data-demo-sector="climas" aria-pressed="false">Climatización</button>
-              <button type="button" data-demo-sector="solar" aria-pressed="false">Paneles solares</button>
-            </div>
-          </div>
-          <ol class="flow-demo-steps" aria-label="Etapas de la consulta" data-demo-controls hidden>
-            <li><button type="button" data-demo-step="0" aria-pressed="true"><span aria-hidden="true">01</span> Consulta</button></li>
-            <li><button type="button" data-demo-step="1" aria-pressed="false"><span aria-hidden="true">02</span> <b data-demo-value="reviewLabel">Revisión humana</b></button></li>
-            <li><button type="button" data-demo-step="2" aria-pressed="false"><span aria-hidden="true">03</span> Cotización</button></li>
-            <li><button type="button" data-demo-step="3" aria-pressed="false"><span aria-hidden="true">04</span> Seguimiento</button></li>
-          </ol>
-          <div class="flow-demo-panels">
-            <section class="flow-demo-chat" aria-label="Conversación de ejemplo">
-              <div class="flow-demo-chat-header">
-                <span class="flow-demo-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 17.5 4 21l4-1.8a9 9 0 1 0-3-1.7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 12h8m-8-3h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
-                <div>
-                  <p class="flow-demo-kicker">Conversación de ejemplo</p>
-                  <h3 data-demo-value="lead">Oficinas Marea</h3>
-                </div>
-              </div>
-              <div class="flow-demo-messages">
-                <div class="flow-demo-message">
-                  <p class="flow-demo-message-role" data-demo-value="customerRole">Prospecto</p>
-                  <p data-demo-value="customer">Hola. Buscamos limpieza de oficinas dos veces por semana en Monterrey. ¿Nos pueden cotizar?</p>
-                </div>
-                <div class="flow-demo-message flow-demo-message-team" data-demo-reply data-draft>
-                  <p class="flow-demo-message-role" data-demo-value="teamRole">Borrador de IA · sin enviar</p>
-                  <p data-demo-value="team">¡Hola! Para preparar una cotización, ¿cuántos metros cuadrados necesitan cubrir y qué horario les funciona?</p>
-                </div>
-              </div>
-            </section>
-            <section class="flow-demo-record" aria-label="Registro de la oportunidad">
-              <div class="flow-demo-record-header">
-                <div>
-                  <p class="flow-demo-kicker">Tablero comercial</p>
-                  <h3>Ficha de la oportunidad</h3>
-                </div>
-                <span class="flow-demo-record-code" data-demo-value="code">SV-018</span>
-              </div>
-              <dl class="flow-demo-fields">
-                <div><dt>Fuente</dt><dd data-demo-value="source">Web → WhatsApp</dd></div>
-                <div><dt>Estado</dt><dd data-demo-value="status">Pendiente de revisión humana</dd></div>
-                <div data-demo-ai-field><dt>IA extrae</dt><dd data-demo-value="aiSummary">Limpieza de oficinas · Monterrey · 2 días por semana</dd></div>
-                <div><dt>Responsable</dt><dd data-demo-value="owner">Atención comercial</dd></div>
-              </dl>
-              <div class="flow-demo-action">
-                <span aria-hidden="true">↳</span>
-                <div>
-                  <p class="flow-demo-kicker">Siguiente acción</p>
-                  <p data-demo-value="next">Ventas verifica los datos y aprueba o edita el borrador antes de enviarlo.</p>
-                </div>
-              </div>
-            </section>
-          </div>
-          <div class="flow-demo-bottom">
-            <p>Ejemplo ficticio. Las sugerencias de IA son ilustrativas.</p>
-            <button type="button" class="flow-demo-next" data-demo-next data-demo-controls hidden>
-              <span data-demo-value="nextLabel">Ver la revisión humana</span>
-              <span aria-hidden="true">→</span>
-            </button>
-          </div>
-          <p class="flow-demo-sr-only" role="status" data-demo-status></p>
+      <div class="experience-lead">
+        <div class="experience-lead-meta"><span class="experience-avatar" aria-hidden="true" data-experience-value="initials">MR</span><div><strong data-experience-value="name">Mariana R.</strong><span data-experience-value="company">Oficinas en Monterrey</span></div><span class="experience-time">Ahora</span></div>
+        <p data-experience-value="request">Hola. Busco limpieza para nuestras oficinas dos veces por semana. ¿Me pueden cotizar?</p>
+        <div class="experience-lead-footer"><span class="experience-small-dot" aria-hidden="true"></span><span data-experience-value="leadStatus">Nueva consulta recibida</span><span aria-hidden="true">↗</span></div>
+      </div>
+      <div class="experience-record">
+        <div class="experience-record-head"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 8h8M8 12h5M8 16h6"/></svg><span>Ficha comercial</span><span class="experience-record-state" data-experience-value="recordStatus">Por organizar</span></div>
+        <div class="experience-record-fields"><span>Servicio<strong data-experience-value="service">Limpieza de oficinas</strong></span><span>Zona<strong data-experience-value="location">Monterrey, N.L.</strong></span></div>
+      </div>
+    </div>
+    <div class="experience-engine" aria-label="La IA conecta la consulta con el seguimiento">
+      <div class="experience-wire experience-wire-left" aria-hidden="true"><i></i></div>
+      <div class="experience-core"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 7v10M24 31v10M7 24h10M31 24h10M12 12l7 7M29 29l7 7M12 36l7-7M29 19l7-7"/><circle cx="24" cy="24" r="5"/></svg></div>
+      <span class="experience-engine-label">ORANDAY AI</span>
+      <span class="experience-engine-state" data-experience-value="engine">Lista para organizar</span>
+      <div class="experience-wire experience-wire-right" aria-hidden="true"><i></i></div>
+    </div>
+    <div class="experience-phone-column">
+      <div class="experience-phone">
+        <div class="experience-phone-top" aria-hidden="true"><span>9:41</span><span class="experience-island"></span><svg viewBox="0 0 36 14"><path d="M1 12V9M5 12V6M9 12V3M13 12V1"/><rect x="21" y="3" width="12" height="8" rx="2"/><path d="M35 5v4"/></svg></div>
+        <div class="experience-phone-header"><span class="experience-phone-avatar" aria-hidden="true">o.</span><div><strong>Tu negocio</strong><span>Atención comercial</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h3l2 5-2 2a16 16 0 0 0 4 4l2-2 5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 4 6a2 2 0 0 1 2-2Z"/></svg></div>
+        <div class="experience-conversation">
+          <span class="experience-chat-date">HOY · EJEMPLO</span>
+          <div class="experience-bubble experience-bubble-in"><p data-experience-value="shortRequest">Hola. ¿Cotizan limpieza para oficinas en Monterrey?</p><span>9:41</span></div>
+          <div class="experience-thinking"><span></span><span></span><span></span><p data-experience-value="thinking">Consulta lista para analizar</p></div>
+          <div class="experience-bubble experience-bubble-out"><span class="experience-reply-label" data-experience-value="replyLabel">Borrador sugerido por IA</span><p data-experience-value="reply">¡Hola, Mariana! ¿Cuántos metros cuadrados necesitan cubrir y qué horario les funciona?</p><span class="experience-reply-note" data-experience-value="replyNote">Tu equipo revisa antes de enviar</span></div>
+          <div class="experience-next"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 11h18m-11 5 2 2 4-4"/></svg><div><strong data-experience-value="nextTitle">Seguimiento preparado</strong><span data-experience-value="next">Confirmar superficie y horario.</span></div></div>
         </div>
+        <div class="experience-phone-input" aria-hidden="true"><span>Un siguiente paso claro.</span><svg viewBox="0 0 24 24"><path d="m5 12 14-7-5 14-2-7-7-2Z"/></svg></div>
+        <div class="experience-homebar" aria-hidden="true"></div>
       </div>
-    </section>
-    <section class="section">
-      <div class="wrap cta-panel">
-        <div>
-          <p class="eyebrow">Tu recorrido</p>
-          <h2>Revisemos una de tus cotizaciones.</h2>
-          <p>Cuéntanos qué servicio vendes, por dónde llegan tus consultas y qué parte del seguimiento quisieras automatizar.</p>
-        </div>
-        <a class="button button-primary" href="https://wa.me/528132379135?text=Hola%2C%20Diego.%20Vi%20la%20demo%20y%20quiero%20revisar%20c%C3%B3mo%20seguimos%20nuestras%20cotizaciones." data-contact="whatsapp" data-placement="demo-final">Pedir diagnóstico <span aria-hidden="true">↗</span></a>
-      </div>
-    </section>
+      <div class="experience-phone-shadow" aria-hidden="true"></div>
+    </div>
+  </div>
+  <div class="experience-bottom">
+    <div class="experience-narrative"><span data-experience-value="stepNumber">01</span><div><strong data-experience-value="headline">Alguien necesita lo que vendes.</strong><p data-experience-value="description">La consulta entra por tu web o WhatsApp. El recorrido empieza aquí.</p></div></div>
+    <button type="button" class="experience-play" data-experience-play data-experience-controls hidden><svg viewBox="0 0 20 20" aria-hidden="true"><path class="experience-play-icon" d="m7 4 9 6-9 6Z"/><path class="experience-pause-icon" d="M6 4h3v12H6zm5 0h3v12h-3Z"/></svg><span data-experience-play-label>Ver recorrido</span></button>
+  </div>
+  <div class="experience-steps" role="group" aria-label="Etapas de la demostración" data-experience-controls hidden>
+    <button type="button" data-experience-step="0" aria-pressed="true"><span>01</span> Consulta<i aria-hidden="true"></i></button>
+    <button type="button" data-experience-step="1" aria-pressed="false"><span>02</span> IA organiza<i aria-hidden="true"></i></button>
+    <button type="button" data-experience-step="2" aria-pressed="false"><span>03</span> Tu equipo revisa<i aria-hidden="true"></i></button>
+    <button type="button" data-experience-step="3" aria-pressed="false"><span>04</span> Seguimiento<i aria-hidden="true"></i></button>
+  </div>
+  <p class="experience-sr" role="status" aria-live="polite" aria-atomic="true" data-experience-status></p>
+  <noscript><p class="experience-noscript">Ejemplo ficticio. Una consulta se organiza con IA, tu equipo revisa la respuesta y queda una tarea de seguimiento. Activa JavaScript para explorar los tres escenarios.</p></noscript>
+</div>
+<p class="hero-note">Demostración propia con datos ficticios. La animación simula un flujo y no envía mensajes ni ejecuta un modelo de IA.</p></section>
+    <section class="section"><div class="wrap cta-panel"><p class="eyebrow">Ahora imagínalo en tu negocio</p><h2>Empecemos con un proceso real.</h2><p>Cuéntanos qué tarea repites, qué herramientas usas y cómo te gustaría que funcionara. Diseñamos un primer flujo que puedas probar.</p><a class="button button-primary" href="https://wa.me/528132379135?text=Hola%2C%20Diego.%20Vi%20la%20demo%20de%20Oranday%20y%20quiero%20revisar%20un%20proceso%20de%20mi%20negocio." data-contact="whatsapp" data-placement="demo-final">Hablemos de tu proyecto <span aria-hidden="true">↗</span></a></div></section>
   </main>
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <a class="wordmark" href="/" aria-label="Oranday Studio, inicio"><img src="/assets/mark-inverse.svg" width="37" height="37" alt=""><span>Oranday <span class="wordmark-sub">Studio</span></span></a>
-      <a href="/automatizacion-ia/">Automatización con IA</a>
-      <a href="/recursos/seguimiento-cotizaciones-whatsapp/">Guía de seguimiento</a>
-      <a href="mailto:contacto@orandaystudio.com" data-contact="email" data-placement="demo-footer">Contacto</a>
-      <a href="/aviso-de-privacidad/">Aviso de privacidad</a>
-    </div>
-  </footer>
-</body>
-</html>
+  <footer class="site-footer"><div class="wrap footer-inner"><div><a class="wordmark" href="/" aria-label="Oranday Studio, inicio"><span>oranday <span class="wordmark-sub">studio</span></span></a><p>Monterrey, Nuevo León.</p></div><nav aria-label="Enlaces de pie de página"><a href="/automatizacion-ia/">Automatización con IA</a><a href="/recursos/seguimiento-cotizaciones-whatsapp/">Guía de seguimiento</a><a href="/aviso-de-privacidad/">Privacidad</a><a href="mailto:contacto@orandaystudio.com" data-contact="email" data-placement="demo-footer">Contacto</a></nav></div></footer>
+</body></html>

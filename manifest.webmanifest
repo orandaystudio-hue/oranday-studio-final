@@ -1,12 +1,12 @@
 {
   "name": "Oranday Studio",
   "short_name": "Oranday",
-  "description": "Diseño web, posicionamiento y automatización con IA para empresas en Monterrey.",
+  "description": "DiseÃ±o web, posicionamiento y automatizaciÃ³n con IA para empresas en Monterrey.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#F8F3E8",
-  "theme_color": "#172725",
+  "background_color": "#08090b",
+  "theme_color": "#08090b",
   "lang": "es-MX",
   "icons": [
     {

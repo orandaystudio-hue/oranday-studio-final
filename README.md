@@ -8,7 +8,7 @@ Sitio estático en español de México para un estudio de diseño web, posiciona
 python -m http.server 8765 --bind 127.0.0.1
 ```
 
-Abre `http://127.0.0.1:8765/`. La demo está integrada en la portada y también abre como página independiente en `/demo/`. El parámetro `giro=servicios`, `giro=climas` o `giro=solar` selecciona el ejemplo inicial. Los datos son simulados y los controles emiten `oranday:demo` dentro del navegador.
+Abre `http://127.0.0.1:8765/`. La demo está integrada en la portada y también abre como página independiente en `/demo/`. El parámetro `giro=servicios`, `giro=climas` o `giro=solar` selecciona el ejemplo inicial. El componente `experience.css` + `experience.js` muestra cuatro etapas de consulta a seguimiento, con reproducción de una sola pasada, pausa, controles por teclado y movimiento reducido. Los datos son simulados, no se envían mensajes y no se ejecuta un modelo de IA. Los controles emiten `oranday:demo` dentro del navegador.
 
 ## Datos estructurados
 
@@ -31,3 +31,7 @@ Los tipos Service describen los servicios que Oranday presta a sus clientes. Los
 - Los canonicals y el sitemap apuntan al dominio de producción. Las vistas previas de Vercel deben entregar el encabezado `X-Robots-Tag: noindex`. Los enlaces heredados de la portada `#servicios`, `#proceso`, `#resultados` y `#faq` siguen disponibles.
 - Antes de promover, confirmar el contacto comercial y completar el aviso integral con la identidad y domicilio del responsable y el procedimiento aplicable. Verificar el sitemap y cada ruta en Search Console después de publicar.
 - `components/ui/` y `tailwind.config.ts` son referencias históricas fuera del sitio. La interfaz usa CSS nativo. Las licencias de Archivo e Inter están en `assets/`.
+
+## Dirección visual
+
+Inter local, negro profundo, blanco frío y grises. La identidad se documenta en `/brand-system.html`. El selector de soluciones emite `oranday:solution` sin enviar datos al exterior. Se mantienen las tres líneas de servicio y los ejemplos de climas y solar.
