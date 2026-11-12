@@ -1,4 +1,4 @@
-# Oranday Studio — Monochrome
+# Oranday Studio AI — Monochrome
 
 ## Direction
 
@@ -19,7 +19,7 @@ The UI/UX Pro Max query `minimalism monochrome dark studio` returned Minimalism 
 | Decorative divider | #292d35 |
 | Interactive border | #4a505b |
 
-Inter is served locally with swap. Headings use 500 weight and tight tracking; body text uses regular weight and comfortable line height. SVG wordmarks have outlined glyphs. The compact `o.` is reserved for the favicon/app icon and simulated phone avatar.
+Inter is served locally with swap. Headings use 500 weight and tight tracking; body text uses regular weight and comfortable line height. SVG wordmarks have outlined glyphs. The approved compact symbol is formed by two opposed arch-shaped strokes. It is used for the favicon, app icon and simulated phone avatar. The lockup combines this symbol, lowercase `oranday` and the lowercase descriptor `studio ai`. The former `o.` icon is superseded. In Spanish body copy, use `IA` or `inteligencia artificial`.
 
 ## Experience
 
@@ -51,3 +51,14 @@ The user supplied https://21st.dev/ as the new component reference. Selected com
 - Animated Beam by Dillion Verma / Magic UI: https://21st.dev/@dillionverma/components/animated-beam . The public upstream measured-element SVG geometry is adapted in `beams.js`/`beams.css`. Full MIT attribution is in `THIRD_PARTY_NOTICES.md`. Beams share the demo state, pause and reduced-motion behavior.
 
 These are HTML/CSS/JS adaptations for the existing static site. They do not introduce a React build, new runtime dependencies or an external component service.
+
+
+## Approved identity — 12 November 2026
+
+The user selected concept 02: a restrained sans wordmark with a two-arch symbol and the lowercase descriptor `studio ai`. Version 04 of the brand manual documents this direction. Use the existing SVG asset routes with updated vector artwork; the 288 × 96 lockup and 80 × 80 symbol preserve current consumers.
+
+- Principal: cool-white artwork on black or graphite. Alternate: black artwork on white.
+- Keep the symbol, name and descriptor proportions; use the symbol alone in small square spaces.
+- Clear space: at least twice the symbol stroke width around the visible artwork, including the descriptor.
+- Minimum complete lockup: 144 px / 35 mm; compact icon: 16 px / 6 mm. Always inspect the final rendered size.
+- Inter remains the communication typeface. The logo is an outlined asset and must not be recreated as live text.
