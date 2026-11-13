@@ -28,8 +28,37 @@
       reply: '¡Hola, Lucía! Podemos empezar por el consumo de energía y el tipo de inmueble. ¿Los revisamos contigo?',
       next: 'Revisar consumo y techo. Responsable: proyectos.',
       summary: 'Proyecto y municipio registrados; falta consumo.'
+    },
+    refacciones: {
+      initials: 'JR', name: 'Jorge R.', company: 'Planta en Apodaca',
+      service: 'Baleros y bandas', location: 'Apodaca, N.L.',
+      request: 'Buen día. Me cotizan 4 baleros 6205 2RS y 6 bandas B-52. Urge para hoy.',
+      shortRequest: 'Me cotizan 4 baleros 6205 2RS y 6 bandas B-52. Urge.',
+      reply: '¡Hola, Jorge! Tenemos las dos piezas en existencia. ¿Te las cotizo para recoger en mostrador o con envío a planta?',
+      next: 'Enviar cotización hoy. Responsable: mostrador.',
+      summary: 'Piezas y cantidades identificadas; falta la entrega.'
+    },
+    clinicas: {
+      initials: 'PS', name: 'Paola S.', company: 'Paciente nueva',
+      service: 'Valoración dental', location: 'Monterrey, N.L.',
+      request: 'Hola. Quiero informes de ortodoncia. ¿Cuánto cuesta la valoración y qué días atienden?',
+      shortRequest: 'Quiero informes de ortodoncia. ¿Qué días atienden?',
+      reply: '¡Hola, Paola! La valoración es el primer paso. ¿Te queda mejor entre semana por la tarde o el sábado por la mañana?',
+      next: 'Confirmar horario de valoración. Responsable: recepción.',
+      summary: 'Tratamiento de interés registrado; falta el horario.'
+    },
+    eventos: {
+      initials: 'DM', name: 'Daniela M.', company: 'Evento de empresa',
+      service: 'Banquete para 80 personas', location: 'San Nicolás, N.L.',
+      request: 'Hola. Buscamos salón y banquete para la posada de la empresa, somos 80 personas. ¿Tienen fecha en diciembre?',
+      shortRequest: 'Busco salón y banquete para 80 personas en diciembre.',
+      reply: '¡Hola, Daniela! Con gusto revisamos fechas. ¿Qué día tienen pensado y prefieren comida o cena?',
+      next: 'Confirmar fecha y menú. Responsable: eventos.',
+      summary: 'Tipo de evento y número de personas registrados; falta la fecha.'
     }
   };
+  // La página /grabar/ usa estos mismos ejemplos para los videos.
+  window.orandayScenarios = scenarios;
   const stages = [
     { headline: 'Alguien necesita lo que vendes.', description: 'La consulta entra por tu web o WhatsApp. El recorrido empieza aquí.', engine: 'Lista para organizar', thinking: 'Consulta lista para analizar', leadStatus: 'Nueva consulta recibida', recordStatus: 'Por organizar', replyLabel: 'Borrador sugerido por IA', replyNote: 'Tu equipo revisa antes de enviar', nextTitle: 'Seguimiento preparado' },
     { headline: 'La IA hace el trabajo repetitivo.', description: 'Identifica el servicio, organiza los datos y prepara una respuesta con las preguntas que faltan.', engine: 'Clasifica y prepara', thinking: 'Datos organizados · borrador listo', leadStatus: 'Consulta clasificada', recordStatus: 'Organizada', replyLabel: 'Borrador sugerido por IA', replyNote: 'Tu equipo revisa antes de enviar', nextTitle: 'Seguimiento preparado' },
@@ -53,6 +82,20 @@
     let autoStarted = false;
     let finished = reducedMotion.matches;
     let pointerInitiatedFocus = false;
+    // El giro solo viaja en el mensaje cuando la persona lo eligió o llegó con ?giro=.
+    let sectorChosen = sector === requestedSector;
+    const whatsappLinks = [...document.querySelectorAll('a[href^="https://wa.me/"]')];
+
+    function tagWhatsappLinks() {
+      if (!sectorChosen) return;
+      const label = sectors.find((button) => button.dataset.experienceSector === sector).textContent.trim();
+      const text = `Hola, Diego. Vi el ejemplo de ${label} en la demo de Oranday y quiero revisar un proceso de mi negocio.`;
+      whatsappLinks.forEach((link) => {
+        const url = new URL(link.href);
+        url.searchParams.set('text', text);
+        link.href = url.toString();
+      });
+    }
 
     function emit(action) {
       root.dispatchEvent(new CustomEvent('oranday:demo', { bubbles: true, detail: { action, sector, stage: stage + 1, component: 'experience' } }));
@@ -112,6 +155,8 @@
       pause();
       autoStarted = true;
       sector = button.dataset.experienceSector;
+      sectorChosen = true;
+      tagWhatsappLinks();
       stage = 0;
       finished = false;
       render('scenario');
@@ -160,6 +205,7 @@
       observer.observe(root);
     }
     render();
+    tagWhatsappLinks();
     root.dataset.ready = 'true';
     root.querySelectorAll('[data-experience-controls]').forEach((element) => { element.hidden = false; });
   });

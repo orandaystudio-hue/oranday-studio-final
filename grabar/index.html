@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#08090b">
+  <title>Grabar video vertical | Oranday Studio AI</title>
+  <link rel="icon" href="/favicon.svg?v=4" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    /* Todo se mide contra el alto del cuadro 9:16 para que se vea igual en cualquier pantalla. */
+    html,body{height:100%;overflow:hidden}
+    body{display:grid;place-items:center;background:#000}
+    .reel{--h:min(100vh,177.78vw);position:relative;width:calc(var(--h)*.5625);height:var(--h);overflow:hidden;background:var(--background);color:var(--foreground);font-family:var(--body)}
+    .reel-grid{position:absolute;inset:0;background-image:linear-gradient(#ffffff0a 1px,transparent 1px),linear-gradient(90deg,#ffffff0a 1px,transparent 1px);background-size:calc(var(--h)*.045) calc(var(--h)*.045);mask-image:radial-gradient(ellipse at 50% 55%,#000 30%,transparent 78%);-webkit-mask-image:radial-gradient(ellipse at 50% 55%,#000 30%,transparent 78%)}
+    .reel-caption{position:absolute;left:8%;right:8%;top:9%;height:17%;display:flex;align-items:center;justify-content:center;text-align:center;font-size:calc(var(--h)*.043);font-weight:500;letter-spacing:-.045em;line-height:1.1;text-wrap:balance}
+    .reel-step{position:absolute;left:8%;top:29.5%;display:flex;align-items:center;gap:calc(var(--h)*.012);font:500 calc(var(--h)*.016) var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--secondary)}
+    .reel-step b{display:grid;place-items:center;width:calc(var(--h)*.042);height:calc(var(--h)*.042);border-radius:50%;background:var(--foreground);color:var(--on-accent);font:600 calc(var(--h)*.021) var(--body)}
+    .reel-phone{position:absolute;left:12%;right:12%;top:35.5%;bottom:9%;display:flex;flex-direction:column;border:1px solid var(--border-strong);border-radius:calc(var(--h)*.04);background:var(--surface);overflow:hidden;box-shadow:0 calc(var(--h)*.03) calc(var(--h)*.08) #000a}
+    .reel-phone-head{display:flex;align-items:center;gap:calc(var(--h)*.012);padding:calc(var(--h)*.018);border-bottom:1px solid var(--border)}
+    .reel-avatar{display:grid;place-items:center;flex:none;width:calc(var(--h)*.046);height:calc(var(--h)*.046);border-radius:50%;background:var(--surface-raised);font-size:calc(var(--h)*.016);font-weight:600}
+    .reel-phone-head strong{display:block;font-size:calc(var(--h)*.019);font-weight:600;line-height:1.2}
+    .reel-phone-head span span{display:block;color:var(--subtle);font-size:calc(var(--h)*.0145);line-height:1.3}
+    .reel-chat{flex:1;display:flex;flex-direction:column;gap:calc(var(--h)*.014);padding:calc(var(--h)*.02) calc(var(--h)*.018)}
+    .reel-bubble{max-width:86%;padding:calc(var(--h)*.014) calc(var(--h)*.017);border-radius:calc(var(--h)*.02);font-size:calc(var(--h)*.0185);line-height:1.35}
+    .reel-in{align-self:flex-start;background:var(--surface-raised);border-bottom-left-radius:calc(var(--h)*.005)}
+    .reel-out{align-self:flex-end;background:var(--foreground);color:var(--on-accent);border-bottom-right-radius:calc(var(--h)*.005)}
+    .reel-label{display:block;margin-bottom:calc(var(--h)*.006);font:600 calc(var(--h)*.0125) var(--mono);letter-spacing:.06em;text-transform:uppercase;opacity:.65}
+    .reel-dots{align-self:flex-end;display:flex;gap:calc(var(--h)*.006);padding:calc(var(--h)*.016);border-radius:calc(var(--h)*.02);background:var(--surface-raised)}
+    .reel-dots i{width:calc(var(--h)*.008);height:calc(var(--h)*.008);border-radius:50%;background:var(--secondary);animation:reel-dot 1s infinite}
+    .reel-dots i:nth-child(2){animation-delay:.15s}.reel-dots i:nth-child(3){animation-delay:.3s}
+    @keyframes reel-dot{0%,100%{opacity:.25}50%{opacity:1}}
+    .reel-task{margin-top:auto;display:flex;gap:calc(var(--h)*.012);align-items:flex-start;padding:calc(var(--h)*.015);border:1px solid var(--border-strong);border-radius:calc(var(--h)*.016);font-size:calc(var(--h)*.0165);line-height:1.35;color:var(--secondary)}
+    .reel-task svg{flex:none;width:calc(var(--h)*.026);height:calc(var(--h)*.026);fill:none;stroke:var(--foreground);stroke-width:1.5}
+    .reel-task strong{display:block;color:var(--foreground);font-weight:600}
+    .reel-foot{position:absolute;left:0;right:0;bottom:3.4%;text-align:center;color:var(--subtle);font:400 calc(var(--h)*.0125) var(--mono);letter-spacing:.08em;text-transform:uppercase}
+    .reel-end{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(var(--h)*.03);padding:0 9%;background:var(--background);text-align:center}
+    .reel-end img{width:calc(var(--h)*.26);height:auto}
+    .reel-end p{font-size:calc(var(--h)*.03);color:var(--secondary);line-height:1.25}
+    .reel-end strong{display:block;margin-top:calc(var(--h)*.012);font-size:calc(var(--h)*.062);font-weight:600;letter-spacing:-.04em;color:var(--foreground)}
+    .reel-end small{font-size:calc(var(--h)*.02);color:var(--secondary)}
+    .reel-start{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(var(--h)*.02);padding:0 10%;border:0;background:#08090bf2;color:var(--foreground);text-align:center;font-size:calc(var(--h)*.024)}
+    .reel-start small{color:var(--secondary);font-size:calc(var(--h)*.017);line-height:1.5}
+    .reel [data-show]{opacity:0;transform:translateY(calc(var(--h)*.012));transition:opacity .45s var(--ease),transform .45s var(--ease)}
+    .reel [data-show].is-on{opacity:1;transform:none}
+    .reel [data-show].is-gone{display:none}
+    .reel-caption.is-swap{opacity:0;transform:translateY(calc(var(--h)*.008))}
+    .reel-caption{transition:opacity .25s,transform .25s}
+    @media (prefers-reduced-motion:reduce){.reel [data-show],.reel-caption{transition:none}.reel-dots i{animation:none}}
+  </style>
+  <script src="/experience.js" defer></script>
+</head>
+<body>
+  <main class="reel" id="reel" aria-label="Video vertical de ejemplo">
+    <div class="reel-grid" aria-hidden="true"></div>
+    <p class="reel-caption" id="caption"></p>
+    <p class="reel-step" data-show id="step"><b id="step-number">1</b><span id="step-label"></span></p>
+    <div class="reel-phone" data-show id="phone">
+      <div class="reel-phone-head"><span class="reel-avatar" id="initials"></span><span><strong id="name"></strong><span id="company"></span></span></div>
+      <div class="reel-chat">
+        <div class="reel-bubble reel-in" data-show id="incoming"></div>
+        <div class="reel-dots" data-show id="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="reel-bubble reel-out" data-show id="draft"><span class="reel-label" id="draft-label"></span><span id="reply"></span></div>
+        <div class="reel-task" data-show id="task"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 11h18m-11 5 2 2 4-4"/></svg><span><strong>Siguiente paso</strong><span id="next"></span></span></div>
+      </div>
+    </div>
+    <p class="reel-foot" id="foot">Ejemplo simulado · orandaystudio.com</p>
+    <div class="reel-end" data-show id="end">
+      <img src="/assets/wordmark-inverse.svg?v=4" width="288" height="96" alt="Oranday Studio AI">
+      <p>Comenta<strong id="keyword"></strong></p>
+      <small>y te digo qué automatizaría en tu negocio.</small>
+    </div>
+    <button type="button" class="reel-start" id="start">
+      <span id="start-title"></span>
+      <small>Empieza a grabar la pantalla y después da clic aquí o presiona Espacio.<br>R reinicia. Este aviso no sale en el video.</small>
+    </button>
+  </main>
+  <script>
+  window.addEventListener('DOMContentLoaded', function () {
+    // Gancho y palabra de cada giro. Los mensajes salen de experience.js, los mismos de la demo.
+    var extras = {
+      servicios:   { label:'Servicios',   hook:'Te pidieron cotización. ¿Quién le dio seguimiento?', keyword:'SERVICIO' },
+      climas:      { label:'Climas',      hook:'Tres climas para una cafetería. ¿Quién le dio seguimiento?', keyword:'CLIMAS' },
+      solar:       { label:'Solar',       hook:'Pidió propuesta para su taller. Faltaba un dato.', keyword:'SOLAR' },
+      refacciones: { label:'Refacciones', hook:'Tu cliente manda la lista. ¿Cuánto tardas en cotizar?', keyword:'COTIZA' },
+      clinicas:    { label:'Clínicas',    hook:'Te escribieron de noche. ¿Cuándo les contestaste?', keyword:'CITAS' },
+      eventos:     { label:'Eventos',     hook:'80 personas para la posada. ¿Tienen fecha?', keyword:'EVENTO' }
+    };
+    var scenarios = window.orandayScenarios || {};
+    var params = new URLSearchParams(window.location.search);
+    var giro = Object.prototype.hasOwnProperty.call(scenarios, params.get('giro')) && extras[params.get('giro')] ? params.get('giro') : 'servicios';
+    var data = scenarios[giro], extra = extras[giro];
+    var byId = function (id) { return document.getElementById(id); };
+    var timers = [];
+
+    byId('initials').textContent = data.initials;
+    byId('name').textContent = data.name;
+    byId('company').textContent = data.company;
+    byId('incoming').textContent = data.shortRequest;
+    byId('reply').textContent = data.reply;
+    byId('next').textContent = data.next;
+    byId('keyword').textContent = extra.keyword;
+    byId('start-title').textContent = 'Ejemplo: ' + extra.label;
+
+    function show(id, on) { byId(id).classList.toggle('is-on', on); }
+    function gone(id, on) { byId(id).classList.toggle('is-gone', on); }
+    function caption(text) {
+      var el = byId('caption');
+      el.classList.add('is-swap');
+      timers.push(setTimeout(function () { el.textContent = text; el.classList.remove('is-swap'); }, 220));
+    }
+    function step(number, label) { byId('step-number').textContent = number; byId('step-label').textContent = label; show('step', true); }
+
+    // Cada cuadro: en qué segundo entra y qué cambia.
+    var timeline = [
+      [0,     function () { caption(extra.hook); show('phone', true); }],
+      [1200,  function () { show('incoming', true); }],
+      [3600,  function () { caption('Llega la consulta.'); step(1, 'Hoy'); }],
+      [7600,  function () { caption('La IA prepara la respuesta.'); step(2, 'IA'); gone('dots', false); show('dots', true); }],
+      [10200, function () { show('dots', false); gone('dots', true); byId('draft-label').textContent = 'Borrador sugerido por IA'; show('draft', true); }],
+      [14800, function () { caption('Tu equipo revisa y envía.'); step(3, 'Tu equipo'); byId('draft-label').textContent = 'Revisada por tu equipo'; }],
+      [19800, function () { caption('Y queda el siguiente paso.'); show('task', true); }],
+      [25200, function () { show('end', true); }]
+    ];
+
+    function reset() {
+      timers.forEach(clearTimeout); timers = [];
+      ['step', 'phone', 'incoming', 'dots', 'draft', 'task', 'end'].forEach(function (id) { show(id, false); });
+      gone('dots', true);
+      byId('caption').textContent = '';
+      byId('start').hidden = false;
+    }
+    function play() {
+      reset();
+      byId('start').hidden = true;
+      timeline.forEach(function (frame) { timers.push(setTimeout(frame[1], frame[0])); });
+    }
+
+    byId('start').addEventListener('click', play);
+    document.addEventListener('keydown', function (event) {
+      if (event.code === 'Space' && !byId('start').hidden) { event.preventDefault(); play(); }
+      if (event.key === 'r' || event.key === 'R') reset();
+    });
+    reset();
+  });
+  </script>
+</body>
+</html>
