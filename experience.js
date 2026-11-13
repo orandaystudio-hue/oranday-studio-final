@@ -4,66 +4,72 @@
   const scenarios = {
     servicios: {
       initials: 'MR', name: 'Mariana R.', company: 'Oficinas en Monterrey',
-      service: 'Limpieza de oficinas', location: 'Monterrey, N.L.',
-      request: 'Hola. Busco limpieza para nuestras oficinas dos veces por semana. ¿Me pueden cotizar?',
-      shortRequest: 'Hola. ¿Cotizan limpieza para oficinas en Monterrey?',
-      reply: '¡Hola, Mariana! ¿Cuántos metros cuadrados necesitan cubrir y qué horario les funciona?',
-      next: 'Confirmar superficie y horario. Responsable: ventas.',
+      service: 'Limpieza de oficinas', location: 'Monterrey, N.L.', wait: 180,
+      chips: ['Limpieza de oficinas', 'Monterrey'],
+      request: '¿Cotizan limpieza para oficinas en Monterrey? Dos veces por semana.',
+      shortRequest: '¿Cotizan limpieza para oficinas en Monterrey?',
+      reply: '¡Hola, Mariana! ¿Cuántos metros cuadrados son y qué horario les funciona?',
+      next: 'Confirmar superficie · ventas',
       summary: 'Servicio, zona y frecuencia identificados.'
     },
     climas: {
       initials: 'AG', name: 'Alejandro G.', company: 'Cafetería en San Pedro',
-      service: 'Instalación de climas', location: 'San Pedro, N.L.',
-      request: 'Hola. Abrimos una cafetería en San Pedro y necesitamos tres climas. ¿Pueden cotizar?',
+      service: 'Instalación de climas', location: 'San Pedro, N.L.', wait: 240,
+      chips: ['3 climas', 'San Pedro'],
+      request: 'Abrimos una cafetería en San Pedro y necesitamos tres climas. ¿Cotizan?',
       shortRequest: 'Necesito tres climas para una cafetería en San Pedro.',
-      reply: '¡Hola, Alejandro! ¿Qué superficie tiene el local y cuándo podemos coordinar una visita técnica?',
-      next: 'Confirmar visita técnica. Responsable: instalaciones.',
+      reply: '¡Hola, Alejandro! ¿Qué superficie tiene el local? Agendamos visita técnica.',
+      next: 'Confirmar visita · instalaciones',
       summary: 'Equipos, ubicación y visita pendiente registrados.'
     },
     solar: {
       initials: 'LC', name: 'Lucía C.', company: 'Taller en Apodaca',
-      service: 'Proyecto solar', location: 'Apodaca, N.L.',
-      request: 'Queremos paneles solares para nuestro taller en Apodaca. ¿Qué necesitan para una propuesta?',
+      service: 'Proyecto solar', location: 'Apodaca, N.L.', wait: 300,
+      chips: ['Paneles · taller', 'Falta: consumo'],
+      request: 'Queremos paneles solares para nuestro taller en Apodaca. ¿Qué necesitan?',
       shortRequest: 'Quiero cotizar paneles solares para un taller en Apodaca.',
-      reply: '¡Hola, Lucía! Podemos empezar por el consumo de energía y el tipo de inmueble. ¿Los revisamos contigo?',
-      next: 'Revisar consumo y techo. Responsable: proyectos.',
+      reply: '¡Hola, Lucía! Empecemos por tu consumo de luz. ¿Me compartes tu recibo?',
+      next: 'Revisar consumo · proyectos',
       summary: 'Proyecto y municipio registrados; falta consumo.'
     },
     refacciones: {
       initials: 'JR', name: 'Jorge R.', company: 'Planta en Apodaca',
-      service: 'Baleros y bandas', location: 'Apodaca, N.L.',
-      request: 'Buen día. Me cotizan 4 baleros 6205 2RS y 6 bandas B-52. Urge para hoy.',
+      service: 'Baleros y bandas', location: 'Apodaca, N.L.', wait: 95,
+      chips: ['4 × Balero 6205-2RS', '6 × Banda B-52'],
+      request: 'Me cotizan 4 baleros 6205 2RS y 6 bandas B-52. Urge para hoy.',
       shortRequest: 'Me cotizan 4 baleros 6205 2RS y 6 bandas B-52. Urge.',
-      reply: '¡Hola, Jorge! Tenemos las dos piezas en existencia. ¿Te las cotizo para recoger en mostrador o con envío a planta?',
-      next: 'Enviar cotización hoy. Responsable: mostrador.',
+      reply: '¡Hola, Jorge! Sí tenemos las dos piezas. ¿Recoges en mostrador o te las enviamos?',
+      next: 'Enviar cotización hoy · mostrador',
       summary: 'Piezas y cantidades identificadas; falta la entrega.'
     },
     clinicas: {
       initials: 'PS', name: 'Paola S.', company: 'Paciente nueva',
-      service: 'Valoración dental', location: 'Monterrey, N.L.',
-      request: 'Hola. Quiero informes de ortodoncia. ¿Cuánto cuesta la valoración y qué días atienden?',
+      service: 'Valoración dental', location: 'Monterrey, N.L.', wait: 720,
+      chips: ['Ortodoncia', 'Paciente nueva'],
+      request: 'Quiero informes de ortodoncia. ¿Cuánto cuesta la valoración y qué días atienden?',
       shortRequest: 'Quiero informes de ortodoncia. ¿Qué días atienden?',
-      reply: '¡Hola, Paola! La valoración es el primer paso. ¿Te queda mejor entre semana por la tarde o el sábado por la mañana?',
-      next: 'Confirmar horario de valoración. Responsable: recepción.',
+      reply: '¡Hola, Paola! La valoración es el primer paso. ¿Entre semana o sábado?',
+      next: 'Confirmar horario · recepción',
       summary: 'Tratamiento de interés registrado; falta el horario.'
     },
     eventos: {
       initials: 'DM', name: 'Daniela M.', company: 'Evento de empresa',
-      service: 'Banquete para 80 personas', location: 'San Nicolás, N.L.',
-      request: 'Hola. Buscamos salón y banquete para la posada de la empresa, somos 80 personas. ¿Tienen fecha en diciembre?',
+      service: 'Banquete para 80 personas', location: 'San Nicolás, N.L.', wait: 150,
+      chips: ['80 personas', 'Diciembre'],
+      request: 'Buscamos salón y banquete para la posada, somos 80 personas. ¿Tienen fecha en diciembre?',
       shortRequest: 'Busco salón y banquete para 80 personas en diciembre.',
-      reply: '¡Hola, Daniela! Con gusto revisamos fechas. ¿Qué día tienen pensado y prefieren comida o cena?',
-      next: 'Confirmar fecha y menú. Responsable: eventos.',
+      reply: '¡Hola, Daniela! Revisamos fechas. ¿Qué día tienen pensado, comida o cena?',
+      next: 'Confirmar fecha y menú · eventos',
       summary: 'Tipo de evento y número de personas registrados; falta la fecha.'
     }
   };
   // La página /grabar/ usa estos mismos ejemplos para los videos.
   window.orandayScenarios = scenarios;
   const stages = [
-    { headline: 'Alguien necesita lo que vendes.', description: 'La consulta entra por tu web o WhatsApp. El recorrido empieza aquí.', engine: 'Lista para organizar', thinking: 'Consulta lista para analizar', leadStatus: 'Nueva consulta recibida', recordStatus: 'Por organizar', replyLabel: 'Borrador sugerido por IA', replyNote: 'Tu equipo revisa antes de enviar', nextTitle: 'Seguimiento preparado' },
-    { headline: 'La IA hace el trabajo repetitivo.', description: 'Identifica el servicio, organiza los datos y prepara una respuesta con las preguntas que faltan.', engine: 'Clasifica y prepara', thinking: 'Datos organizados · borrador listo', leadStatus: 'Consulta clasificada', recordStatus: 'Organizada', replyLabel: 'Borrador sugerido por IA', replyNote: 'Tu equipo revisa antes de enviar', nextTitle: 'Seguimiento preparado' },
-    { headline: 'Tu equipo tiene el control.', description: 'Revisa el contexto, ajusta lo necesario y aprueba la respuesta. Las decisiones comerciales siguen en tus manos.', engine: 'Revisión humana', thinking: 'Revisión del equipo completada', leadStatus: 'Respuesta revisada', recordStatus: 'En atención', replyLabel: 'Revisada por tu equipo', replyNote: 'Respuesta aprobada · ejemplo simulado', nextTitle: 'Seguimiento preparado' },
-    { headline: 'Cada oportunidad tiene un siguiente paso.', description: 'Queda una tarea con responsable para continuar la conversación y preparar la cotización.', engine: 'Seguimiento conectado', thinking: 'Consulta atendida y registrada', leadStatus: 'Seguimiento registrado', recordStatus: 'Con responsable', replyLabel: 'Revisada por tu equipo', replyNote: 'Respuesta aprobada · ejemplo simulado', nextTitle: 'Siguiente acción registrada' }
+    { headline: 'Alguien necesita lo que vendes.', description: 'Te escriben por WhatsApp o tu página. Mientras nadie contesta, el cliente sigue buscando.', engine: 'Lista para organizar', thinking: 'Consulta lista para analizar', leadStatus: 'Nueva consulta recibida', recordStatus: 'Por organizar', replyLabel: 'Borrador sugerido por IA', replyNote: 'Tu equipo revisa antes de enviar', nextTitle: 'Seguimiento preparado' },
+    { headline: 'Oranday hace el trabajo repetitivo.', description: 'Lee el mensaje, saca los datos importantes y prepara la respuesta con lo que falta preguntar.', engine: 'Lee, organiza y prepara', thinking: 'Datos detectados · borrador listo', leadStatus: 'Consulta clasificada', recordStatus: 'Organizada', replyLabel: 'Borrador sugerido por IA', replyNote: 'Tu equipo revisa antes de enviar', nextTitle: 'Seguimiento preparado' },
+    { headline: 'Tu equipo aprueba con un clic.', description: 'Revisa el borrador, ajusta si hace falta y lo envía. Nada sale sin que una persona lo apruebe.', engine: 'Revisión humana', thinking: 'Esperando aprobación', leadStatus: 'Respuesta aprobada', recordStatus: 'En atención', replyLabel: 'Borrador sugerido por IA', replyNote: 'Esperando tu aprobación', nextTitle: 'Seguimiento preparado' },
+    { headline: 'Cada cliente tiene un siguiente paso.', description: 'Queda una tarea con responsable y fecha. Ninguna consulta se queda olvidada en un chat.', engine: 'Seguimiento conectado', thinking: 'Consulta atendida y registrada', leadStatus: 'Seguimiento registrado', recordStatus: 'Con responsable', replyLabel: 'Revisada y enviada', replyNote: 'Ejemplo simulado', nextTitle: 'Siguiente acción registrada' }
   ];
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const requestedSector = new URLSearchParams(window.location.search).get('giro');
@@ -107,9 +113,30 @@
       playButton.setAttribute('aria-label', `${playLabel.textContent} demostración`);
     }
 
+    // En el paso 1 el contador corre de 1 a los minutos del ejemplo, como un chat que nadie contesta.
+    let waitFrame = 0;
+    function runWaitCounter(target) {
+      window.cancelAnimationFrame(waitFrame);
+      const labels = values.filter((element) => element.dataset.experienceValue === 'waitLabel');
+      root.dataset.waiting = String(stage === 0);
+      if (stage !== 0 || !playing || reducedMotion.matches) return;
+      const start = performance.now();
+      const tick = (now) => {
+        const t = Math.min(1, (now - start) / 3000);
+        const minutes = Math.max(1, Math.round(target * t * t));
+        labels.forEach((element) => { element.textContent = `Sin responder · ${minutes} min`; });
+        if (t < 1 && stage === 0 && playing) waitFrame = window.requestAnimationFrame(tick);
+      };
+      waitFrame = window.requestAnimationFrame(tick);
+    }
+
     function render(action) {
-      const content = { ...scenarios[sector], ...stages[stage], stepNumber: String(stage + 1).padStart(2, '0') };
+      const scenario = scenarios[sector];
+      const content = { ...scenario, ...stages[stage], stepNumber: String(stage + 1).padStart(2, '0'),
+        chip1: scenario.chips[0], chip2: scenario.chips[1],
+        waitLabel: stage === 0 ? `Sin responder · ${scenario.wait} min` : 'Atendida al momento' };
       values.forEach((element) => { element.textContent = content[element.dataset.experienceValue] || ''; });
+      runWaitCounter(scenario.wait);
       root.dataset.stage = String(stage);
       sectors.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.experienceSector === sector)));
       steps.forEach((button, index) => {

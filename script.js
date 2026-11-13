@@ -79,3 +79,24 @@ document.addEventListener("click", (event) => {
   document.dispatchEvent(new CustomEvent("oranday:contact", { detail }));
   if (Array.isArray(window.dataLayer)) window.dataLayer.push(detail);
 });
+
+// Botón flotante: aparece al bajar y se esconde cuando ya se ve el cierre de contacto.
+(() => {
+  if (document.querySelector('.wa-float')) return;
+  const link = document.createElement('a');
+  link.className = 'wa-float';
+  link.href = 'https://wa.me/528132379135?text=' + encodeURIComponent('Hola, Diego. Quiero agendar la llamada gratis de 15 minutos para mi negocio.');
+  link.dataset.contact = 'whatsapp';
+  link.dataset.placement = 'flotante';
+  link.setAttribute('aria-label', 'Agendar llamada gratis por WhatsApp');
+  link.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5A8.5 8.5 0 0 1 12.5 20a10 10 0 0 1-4-.9L3 21l1.9-5.5a10 10 0 0 1-.9-4A8.5 8.5 0 0 1 12.5 3h.5a8.5 8.5 0 0 1 8 8z"/></svg><span>Llamada gratis</span>';
+  document.body.append(link);
+  const contact = document.querySelector('#contacto, .cta-panel');
+  let contactVisible = false;
+  const update = () => link.classList.toggle('is-on', window.scrollY > 520 && !contactVisible);
+  if (contact && 'IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => { contactVisible = entries.some((e) => e.isIntersecting); update(); }).observe(contact);
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
