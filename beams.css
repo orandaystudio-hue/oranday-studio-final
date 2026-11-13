@@ -1,0 +1,52 @@
+/* Native SVG adaptation of Magic UI Animated Beam. See THIRD_PARTY_NOTICES.md. */
+.experience .experience-beams {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  color: #cdd4e2;
+  stroke: none;
+}
+.experience[data-beams-ready="true"] .experience-wire,
+.experience[data-beams-ready="true"] .experience-phone-column::before { visibility: hidden; }
+.experience .experience-beam-track {
+  stroke: #747e9052;
+  stroke-width: 1;
+  stroke-linecap: round;
+  transition: stroke .4s ease;
+}
+.experience .experience-beam-terminal { fill: #8993a4; stroke: none; opacity: .55; }
+.experience .experience-beam-glow,
+.experience .experience-beam-pulse {
+  stroke: #edf3ff;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-dasharray: 130 1000;
+  stroke-dashoffset: 130;
+  opacity: 0;
+  animation: oranday-beam-travel 3.8s cubic-bezier(.25,.1,.45,1) infinite;
+  animation-play-state: paused;
+}
+.experience .experience-beam-glow { stroke-width: 5; filter: blur(3px); }
+.experience .experience-beam[data-active="true"] .experience-beam-track { stroke: #bac7df8c; }
+.experience .experience-beam[data-active="true"] .experience-beam-terminal { fill: #e3ebf9; opacity: .9; }
+.experience .experience-beams[data-running="true"] .experience-beam[data-active="true"] .experience-beam-pulse,
+.experience .experience-beams[data-running="true"] .experience-beam[data-active="true"] .experience-beam-glow {
+  animation-play-state: running;
+}
+.experience .experience-beam[data-active="true"] .experience-beam-pulse { opacity: .95; }
+.experience .experience-beam[data-active="true"] .experience-beam-glow { opacity: .38; }
+.experience .experience-beams[data-reduced="true"] .experience-beam-pulse,
+.experience .experience-beams[data-reduced="true"] .experience-beam-glow { animation: none; opacity: 0; }
+@keyframes oranday-beam-travel {
+  0% { stroke-dashoffset: 130; }
+  75%, 100% { stroke-dashoffset: -1000; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .experience .experience-beam-track { transition: none; }
+  .experience .experience-beam-pulse,
+  .experience .experience-beam-glow { animation: none !important; opacity: 0 !important; }
+}

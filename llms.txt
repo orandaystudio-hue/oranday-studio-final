@@ -1,0 +1,37 @@
+# Oranday Studio AI
+
+> Agencia de inteligencia artificial en Monterrey, Nuevo León, México. Ayuda a negocios a automatizar procesos con IA, mejorar su página web y ordenar su seguimiento comercial. Todo proyecto empieza con un diagnóstico de procesos pagado.
+
+Datos del negocio:
+
+- Nombre: Oranday Studio AI (también Oranday Studio)
+- Fundador: Diego Oranday
+- Ubicación: Monterrey, Nuevo León, México. Atiende negocios de todo México.
+- Idioma: español
+- Contacto: WhatsApp +52 81 3237 9135 · contacto@orandaystudio.com
+- Sitio: https://orandaystudio.com/
+
+Cómo trabaja:
+
+- Primero hace un diagnóstico: una sesión con el dueño o responsable y un documento con las tres mejoras de mayor retorno, cada una con alcance, precio y tiempo.
+- El diagnóstico cuesta $3,500 MXN + IVA y se abona completo si el cliente contrata alguna mejora.
+- En las automatizaciones, la IA prepara y una persona del negocio aprueba cotizaciones, compromisos y respuestas sensibles.
+- Si no hay nada que convenga automatizar, lo dice.
+
+## Servicios
+
+- [Diagnóstico de procesos con IA](https://orandaystudio.com/diagnostico/): el primer paso. Qué se revisa, qué se entrega y cuánto cuesta.
+- [Automatización con IA](https://orandaystudio.com/automatizacion-ia/): flujos de ventas, atención y operación con revisión humana.
+- [Diseño web y posicionamiento](https://orandaystudio.com/diseno-web-posicionamiento/): landing pages y sitios preparados para buscadores.
+- [Captación y seguimiento comercial](https://orandaystudio.com/captacion-seguimiento-comercial/): WhatsApp, formularios y un CRM sencillo conectados.
+
+## Ejemplos por giro
+
+- [Cotizaciones para distribuidores industriales](https://orandaystudio.com/cotizaciones-distribuidores-industriales/): de la lista del cliente al borrador de cotización.
+- [Climatización en Monterrey](https://orandaystudio.com/captacion-climatizacion-monterrey/)
+- [Paneles solares en Monterrey](https://orandaystudio.com/captacion-paneles-solares-monterrey/)
+- [Demo interactiva](https://orandaystudio.com/demo/): seis ejemplos con datos ficticios: servicios, climas, solar, refacciones, clínicas y eventos.
+
+## Recursos
+
+- [Cómo dar seguimiento a cotizaciones por WhatsApp](https://orandaystudio.com/recursos/seguimiento-cotizaciones-whatsapp/)

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 570" fill="none">
+  <title>Azotea comercial con paneles solares y equipo de climatización</title>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0v32" stroke="#A2B6A6" stroke-opacity=".15"/>
+    </pattern>
+    <linearGradient id="roof" x1="175" y1="246" x2="570" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2F4A42"/>
+      <stop offset="1" stop-color="#233A32"/>
+    </linearGradient>
+    <g id="panel">
+      <path d="M0 39H72l-4 5H4z" fill="#0C1916" stroke="#96AD9C" stroke-width=".7"/>
+      <rect x=".5" y=".5" width="71" height="38" rx="2" fill="#183A34" stroke="#90BAAA"/>
+      <path d="M7 7h58v25H7zM7 15.3h58M7 23.7h58M18.6 7v25M30.2 7v25M41.8 7v25M53.4 7v25" stroke="#7AB4A3" stroke-opacity=".72" stroke-width=".8"/>
+      <path d="M6 3h47" stroke="#C7E2D4" stroke-opacity=".55"/>
+    </g>
+  </defs>
+
+  <path fill="#172725" d="M0 0h760v570H0z"/>
+  <path fill="url(#grid)" d="M21 21h718v528H21z"/>
+  <path d="M21 47V21h26m666 0h26v26m0 476v26h-26m-666 0H21v-26" stroke="#ADBEB1" stroke-opacity=".57"/>
+  <g stroke="#A0B8A7" stroke-opacity=".34">
+    <path d="M76 443l327 88 284-149M76 456l327 91 284-152" stroke-dasharray="3 6"/>
+    <path d="M124 273v168m543-178v140M395 156v367" stroke-dasharray="3 7"/>
+  </g>
+  <g font-family="ui-monospace, Consolas, monospace" font-size="11" letter-spacing="2">
+    <text x="42" y="52" fill="#BDD0C1">ORANDAY STUDIO</text>
+    <text x="718" y="52" fill="#BDD0C1" text-anchor="end">FIG. 01 / MTY</text>
+    <text x="42" y="528" fill="#BDD0C1">PLANO DE SERVICIO</text>
+    <text x="718" y="528" fill="#BDD0C1" text-anchor="end">NUEVO LEÓN, MX</text>
+  </g>
+
+  <!-- Structural volume and roof. -->
+  <path d="M146 308l255 119v90L146 396z" fill="#1D302A" stroke="#839D8C"/>
+  <path d="M401 427l252-137v89L401 517z" fill="#2A4238" stroke="#839D8C"/>
+  <path d="M146 308l251-135 256 117-252 137z" fill="url(#roof)" stroke="#A6BCAA" stroke-width="1.4"/>
+  <path d="M166 308l231-124 235 107-231 125z" stroke="#9AB1A0" stroke-opacity=".55"/>
+  <path d="M146 322l255 119 252-137m-507 79l255 121 252-137" stroke="#94AA99" stroke-opacity=".55"/>
+  <path d="M198 348v59m49-36v59m49-36v59m49-36v59m103-66v59m49-86v59m49-86v59m49-86v59" stroke="#809D8A" stroke-opacity=".43"/>
+  <path d="M186 356l45 21v20l-45-21zm62 29l45 21v20l-45-21zm62 29l45 21v20l-45-21z" fill="#38564A" stroke="#7B9B88" stroke-width=".85"/>
+  <path d="M417 454l33-18v52l-33 18zm84-46l92-50v29l-92 50z" fill="#1B2F28" stroke="#71917F"/>
+  <path d="M511 408l72-39m-72 46l72-39m-72 46l72-39" stroke="#71917F" stroke-opacity=".8"/>
+  <path d="M161 404l31 15m11 5l17 8m303 14l26-14" stroke="#A8BEAE" stroke-opacity=".4"/>
+
+  <!-- Panel rows sit on the roof plane. -->
+  <g transform="matrix(.97 -.523 .992 .453 146 300)">
+    <path d="M30 28h161v135H30z" fill="#192B25" opacity=".64"/>
+    <use href="#panel" x="35" y="32"/>
+    <use href="#panel" x="114" y="32"/>
+    <use href="#panel" x="35" y="79"/>
+    <use href="#panel" x="114" y="79"/>
+    <use href="#panel" x="35" y="126"/>
+    <use href="#panel" x="114" y="126"/>
+  </g>
+
+  <!-- Ventilation unit, drawn on a second plane to show the enclosure. -->
+  <path d="M462 293l65 30 70-38-65-30z" fill="#14241E" opacity=".74"/>
+  <path d="M450 249l64 29v43l-64-30z" fill="#5C7968" stroke="#B5CBB9"/>
+  <path d="M514 278l70-38v43l-70 38z" fill="#344F43" stroke="#B5CBB9"/>
+  <path d="M450 249l70-37 64 28-70 38z" fill="#789382" stroke="#C4D8C7" stroke-width="1.3"/>
+  <path d="M459 257l46 21v28l-46-21z" fill="#1E342C" stroke="#A1B8A8" stroke-width=".9"/>
+  <path d="M463 264l38 17m-38-11l38 17m-38-11l38 17m-38-11l38 17" stroke="#A1B8A8" stroke-width=".85"/>
+  <path d="M523 282l22-12v22l-22 12zm26-14l26-14v22l-26 14z" stroke="#ADC2AF" stroke-opacity=".77" stroke-width=".9"/>
+  <path d="M529 285l10-5m16-9l13-7m-13 14l13-7" stroke="#ADC2AF" stroke-opacity=".77" stroke-width=".9"/>
+  <ellipse cx="516" cy="245" rx="24" ry="11" fill="#23392F" stroke="#C4D8C7"/>
+  <ellipse cx="516" cy="245" rx="18" ry="8" stroke="#9CB5A3"/>
+  <ellipse cx="516" cy="245" rx="4" ry="2" fill="#C4D8C7"/>
+  <path d="M498 246c9 2 10-2 18-1s11-3 13-5m-20-3c-1 2 1 5 7 8s5 5 3 7" stroke="#A7C0AE"/>
+
+  <!-- Numbered editorial annotations. -->
+  <g stroke="#FF6B3D" stroke-width="1.3">
+    <path d="M232 130h31l63 109"/>
+    <path d="M602 143h-26l-44 71"/>
+    <circle cx="326" cy="239" r="3.5" fill="#172725"/>
+    <circle cx="532" cy="214" r="3.5" fill="#172725"/>
+  </g>
+  <g font-family="ui-monospace, Consolas, monospace" font-size="14" letter-spacing="1.2">
+    <path d="M69 114h156v31H69zM608 127h92v31h-92z" fill="#172725" stroke="#798C7F"/>
+    <text x="80" y="134" fill="#FF6B3D">01</text>
+    <text x="110" y="134" fill="#F8F3E8">PANELES</text>
+    <text x="619" y="147" fill="#FF6B3D">02</text>
+    <text x="649" y="147" fill="#F8F3E8">HVAC</text>
+  </g>
+</svg>

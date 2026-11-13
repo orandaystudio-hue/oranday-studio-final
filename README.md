@@ -1,44 +1,37 @@
-# Aurora Background — referencia React (NO es el sitio en vivo)
+# Oranday Studio
 
-Tu sitio actual (`/OS/web/`) es **HTML + CSS + JS plano** — sin Node, sin build, listo para
-subir a cualquier hosting estático. Por eso el efecto Aurora ya está implementado de forma
-**nativa en CSS** dentro de `styles.css` (clase `.hero__aurora`), adaptado a tu paleta de
-marca (Pinar + Latón sobre Tinta) en lugar del azul/violeta genérico del componente original.
+Sitio estático en español de México para un estudio de diseño web, posicionamiento y automatización con IA en Monterrey. Vercel sirve los archivos desde la raíz del repositorio. No requiere compilación ni dependencias de JavaScript.
 
-Esta carpeta guarda el **componente React original** que pasaste, por si en el futuro migras
-el sitio a un stack React/Next + Tailwind + shadcn. No se usa en producción hoy.
+## Vista local
 
-## Si algún día migras a React/shadcn
+```sh
+python -m http.server 8765 --bind 127.0.0.1
+```
 
-Requisitos del proyecto: React + TypeScript + Tailwind CSS + estructura shadcn.
+Abre `http://127.0.0.1:8765/`. La demo está integrada en la portada y también abre como página independiente en `/demo/`. El parámetro `giro=servicios`, `giro=climas` o `giro=solar` selecciona el ejemplo inicial. El componente `experience.css` + `experience.js` muestra cuatro etapas de consulta a seguimiento, con reproducción de una sola pasada, pausa, controles por teclado y movimiento reducido. Los datos son simulados, no se envían mensajes y no se ejecuta un modelo de IA. Los controles emiten `oranday:demo` dentro del navegador.
 
-1. **Crear proyecto y Tailwind** (si no existe):
-   ```bash
-   npm create vite@latest mi-app -- --template react-ts
-   cd mi-app
-   npm install -D tailwindcss postcss autoprefixer
-   npx tailwindcss init -p
-   ```
-2. **Inicializar shadcn** (crea `components/ui` y `lib/utils.ts` con `cn`):
-   ```bash
-   npx shadcn@latest init
-   ```
-   > Importante: la carpeta `components/ui` es la convención de shadcn. Mantener los
-   > componentes ahí permite que el CLI los actualice, evita imports rotos y mantiene
-   > el alias `@/components/ui/...` que usa este componente.
-3. **Dependencias externas del componente:**
-   ```bash
-   npm install framer-motion
-   ```
-   (`cn` viene de `lib/utils.ts` que crea shadcn; usa `clsx` + `tailwind-merge`.)
-4. **Copiar** `components/ui/aurora-background.tsx` y `components/ui/demo.tsx` a tu proyecto.
-5. **Extender** tu `tailwind.config.ts` con el contenido de `tailwind.config.ts` de esta
-   carpeta (animación `aurora` + plugin `addVariablesForColors`, que expone cada color de
-   Tailwind como variable CSS `--blue-500`, etc., necesarias para los gradientes).
-6. Para que combine con tu marca, cambia en el componente los colores del `--aurora`
-   (`--blue-500`, `--indigo-300`, …) por verdes/latón equivalentes
-   (`--emerald-700`, `--emerald-500`, `--amber-300` …).
+## Datos estructurados
 
-## Assets / iconos
-- El componente no requiere imágenes. Si añades logos o íconos, usa `lucide-react`.
-- No necesita imágenes de stock (Unsplash) para funcionar.
+| Ruta | JSON-LD |
+| --- | --- |
+| `/` | Organization, WebSite y WebPage |
+| `/diseno-web-posicionamiento/`, `/captacion-seguimiento-comercial/` y `/automatizacion-ia/` | WebPage, Service y BreadcrumbList |
+| `/captacion-climatizacion-monterrey/` | WebPage, Service y BreadcrumbList |
+| `/captacion-paneles-solares-monterrey/` | WebPage, Service y BreadcrumbList |
+| `/demo/` | WebPage, LearningResource y BreadcrumbList |
+| `/recursos/seguimiento-cotizaciones-whatsapp/` | WebPage, Article y BreadcrumbList |
+| `/aviso-de-privacidad/` | WebPage y BreadcrumbList |
+| `/brand-system.html` | WebPage |
+
+Los tipos Service describen los servicios que Oranday presta a sus clientes. Los ejemplos de la demo son ficticios. Las preguntas frecuentes se mantienen como contenido visible.
+
+## Operación
+
+- Las acciones de contacto emiten `oranday:contact` con evento, ruta y posición. `script.js` puede pasar el evento a un `dataLayer` ya inicializado. El sitio no instala un proveedor de analítica. Los clics y las consultas recibidas se registran por separado.
+- Los canonicals y el sitemap apuntan al dominio de producción. Las vistas previas de Vercel deben entregar el encabezado `X-Robots-Tag: noindex`. Los enlaces heredados de la portada `#servicios`, `#proceso`, `#resultados` y `#faq` siguen disponibles.
+- Antes de promover, confirmar el contacto comercial y completar el aviso integral con la identidad y domicilio del responsable y el procedimiento aplicable. Verificar el sitemap y cada ruta en Search Console después de publicar.
+- `components/ui/` y `tailwind.config.ts` son referencias históricas fuera del sitio. La interfaz usa CSS nativo. Las licencias de Archivo e Inter están en `assets/`.
+
+## Dirección visual
+
+Inter local, negro profundo, blanco frío y grises. La identidad se documenta en `/brand-system.html`. El selector de soluciones emite `oranday:solution` sin enviar datos al exterior. Se mantienen las tres líneas de servicio y los ejemplos de climas y solar.

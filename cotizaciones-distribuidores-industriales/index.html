@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090b">
+  <title>Cotizaciones para distribuidores industriales | Oranday Studio AI</title>
+  <meta name="description" content="Tu vendedor reenvía la lista del cliente y recibe el borrador de cotización con clave, existencia y precio. Piloto de 10 días hábiles para distribuidores industriales en Monterrey.">
+  <link rel="canonical" href="https://orandaystudio.com/cotizaciones-distribuidores-industriales/">
+  <link rel="icon" href="/favicon.svg?v=4" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=4">
+  <meta property="og:site_name" content="Oranday Studio AI">
+  <meta property="og:title" content="Cotizaciones para distribuidores industriales | Oranday Studio AI">
+  <meta property="og:description" content="De la lista que manda tu cliente al borrador de cotización, revisado por tu vendedor antes de enviarse.">
+  <meta property="og:url" content="https://orandaystudio.com/cotizaciones-distribuidores-industriales/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:image" content="https://orandaystudio.com/assets/share.png?v=4">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Oranday Studio AI, diseño web y soluciones con IA en Monterrey">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .quote-demo{display:grid;grid-template-columns:minmax(16rem,22rem) minmax(0,1fr);gap:1.5rem;align-items:start;margin-top:2rem}
+    .quote-panel{min-width:0;padding:1.4rem;border:1px solid var(--border);border-radius:12px;background:var(--surface)}
+    .quote-panel h3{font-size:1.05rem;letter-spacing:-.02em}
+    .quote-from{margin-top:.6rem;color:var(--subtle);font-size:.8rem}
+    .quote-message{margin-top:.8rem;padding:.9rem 1rem;border-radius:10px;background:var(--surface-raised);white-space:pre-wrap;font-size:.92rem;line-height:1.55}
+    .quote-panel .button{margin-top:1.1rem}
+    .quote-panel button:disabled{opacity:.5;cursor:default}
+    .quote-empty{padding:3rem 0;color:var(--subtle);text-align:center}
+    .quote-scroll{overflow-x:auto;margin-top:.8rem}
+    .quote-table{width:100%;min-width:36rem;border-collapse:collapse;font-size:.9rem}
+    .quote-table th{padding:.45rem .5rem;border-bottom:1px solid var(--border-strong);color:var(--subtle);font-weight:500;font-size:.78rem;text-align:left}
+    .quote-table td{padding:.65rem .5rem;border-bottom:1px solid var(--border);vertical-align:top}
+    .quote-table .num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+    .quote-asked{display:block;margin-top:.2rem;color:var(--subtle);font-size:.8rem}
+    .quote-table tr.needs-review td{background:var(--surface-raised)}
+    .quote-flag{display:block;margin-top:.3rem;font-size:.8rem;font-weight:600}
+    .quote-table select{max-width:100%;padding:.35rem .5rem;border:1px solid var(--border-strong);border-radius:6px;background:var(--background);color:var(--foreground)}
+    .quote-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;margin-top:1rem}
+    .quote-status{color:var(--secondary);font-size:.88rem}
+    .quote-total{font-size:1.05rem;font-weight:600;font-variant-numeric:tabular-nums}
+    .scope-list{margin:1.2rem 0 0;padding:0;list-style:none;border-top:1px solid var(--border)}
+    .scope-list li{display:grid;grid-template-columns:11rem minmax(0,1fr);gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--border)}
+    .scope-list span{color:var(--subtle);font-size:.85rem}
+    @media (max-width:52rem){.quote-demo{grid-template-columns:1fr}.scope-list li{grid-template-columns:1fr;gap:.2rem}}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://orandaystudio.com/cotizaciones-distribuidores-industriales/#webpage",
+      "url": "https://orandaystudio.com/cotizaciones-distribuidores-industriales/",
+      "name": "Cotizaciones para distribuidores industriales",
+      "description": "Tu vendedor reenvía la lista del cliente y recibe el borrador de cotización con clave, existencia y precio.",
+      "isPartOf": {"@id": "https://orandaystudio.com/#website"},
+      "inLanguage": "es-MX",
+      "breadcrumb": {"@id": "https://orandaystudio.com/cotizaciones-distribuidores-industriales/#breadcrumb"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://orandaystudio.com/cotizaciones-distribuidores-industriales/#breadcrumb",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://orandaystudio.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Cotizaciones para distribuidores", "item": "https://orandaystudio.com/cotizaciones-distribuidores-industriales/"}
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://orandaystudio.com/cotizaciones-distribuidores-industriales/#service",
+      "url": "https://orandaystudio.com/cotizaciones-distribuidores-industriales/",
+      "name": "Preparación de cotizaciones para distribuidores industriales",
+      "description": "Identificamos cada pieza de la solicitud del cliente contra el catálogo del distribuidor y entregamos el borrador de cotización para que el vendedor lo revise.",
+      "serviceType": "Automatización de cotizaciones con IA",
+      "provider": {"@id": "https://orandaystudio.com/#organization"},
+      "areaServed": {"@type": "City", "name": "Monterrey"},
+      "audience": {"@type": "BusinessAudience", "audienceType": "Distribuidores industriales"}
+    }
+  ]
+}
+  </script>
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="/" aria-label="Oranday Studio AI, inicio"><img src="/assets/wordmark-inverse.svg?v=4" width="144" height="48" alt="Oranday Studio AI"></a>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="/#servicios">Servicios</a>
+        <a href="/demo/">Demo</a>
+        <a href="/#proceso">Proceso</a>
+      </nav>
+      <a class="button button-primary" href="https://wa.me/528132379135?text=Hola%2C%20Diego.%20Quiero%20probar%20el%20piloto%20de%20cotizaciones%20en%20mi%20distribuidora." data-contact="whatsapp" data-placement="header">Pedir el piloto</a>
+    </div>
+  </header>
+  <main class="inner-page" id="contenido">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Ruta de navegación">
+        <a href="/">Inicio</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Cotizaciones para distribuidores</span>
+      </nav>
+    </div>
+    <section class="inner-hero">
+      <div class="wrap">
+        <p class="eyebrow">Distribuidores industriales / Monterrey, Nuevo León</p>
+        <h1>Tu cliente manda la lista. Tu vendedor recibe la cotización lista para revisar.</h1>
+        <p class="lead">Tu vendedor reenvía la solicitud tal como llegó, por WhatsApp, correo, Excel o foto. Identificamos cada pieza contra tu catálogo y devolvemos el borrador con clave, existencia y precio. Nada sale a tu cliente sin que tu vendedor lo apruebe.</p>
+        <div class="button-row">
+          <a class="button button-primary" href="https://wa.me/528132379135?text=Hola%2C%20Diego.%20Quiero%20probar%20el%20piloto%20de%20cotizaciones%20en%20mi%20distribuidora." data-contact="whatsapp" data-placement="cotizaciones-hero">Pedir el piloto por WhatsApp</a>
+          <a class="button button-secondary" href="#demo">Ver el ejemplo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="demo">
+      <div class="wrap">
+        <p class="eyebrow">Ejemplo con datos ficticios</p>
+        <h2 id="demo">De la lista al borrador</h2>
+        <div class="quote-demo">
+          <div class="quote-panel">
+            <h3>Solicitud recibida por WhatsApp</h3>
+            <p class="quote-from">Ing. Ramírez · Planta Ejemplo Apodaca · 9:42 a. m.</p>
+            <div class="quote-message">Buen día, me cotizan porfa, urge para hoy:
+
+4 baleros 6205 2rs
+2 chumaceras de piso 1 1/4
+banda B-52 son 6
+10 mts manguera hidraulica 1/2 R2
+1 reten 35x52x7
+3 baleros 6308 zz c3
+cople lovejoy L-100</div>
+            <button type="button" class="button button-primary" id="quote-run">Preparar cotización</button>
+          </div>
+          <div class="quote-panel">
+            <h3>Borrador de cotización · Distribuidora Ejemplo del Norte</h3>
+            <p class="quote-empty" id="quote-empty">Aquí aparece el borrador.</p>
+            <div id="quote-result" hidden>
+              <div class="quote-scroll">
+                <table class="quote-table">
+                  <thead><tr><th>Pieza del catálogo</th><th class="num">Cant.</th><th class="num">Existencia</th><th class="num">Precio</th><th class="num">Importe</th></tr></thead>
+                  <tbody id="quote-rows"></tbody>
+                </table>
+              </div>
+              <div class="quote-foot">
+                <p class="quote-status" id="quote-status" role="status"></p>
+                <p class="quote-total">Subtotal sin IVA: <span id="quote-total"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="hero-note">Demostración propia. La empresa, el cliente, las claves, las existencias y los precios son inventados. Esta página simula el resultado y no ejecuta un modelo de IA.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="como">
+      <div class="wrap">
+        <p class="eyebrow">Cómo trabaja</p>
+        <h2 id="como">Tres pasos, y el vendedor decide</h2>
+        <div class="inner-grid">
+          <article class="content-card">
+            <p class="eyebrow">01 / Entrada</p>
+            <h3>El vendedor reenvía la solicitud</h3>
+            <p>Tal como llegó: con números de parte incompletos, medidas en lugar de claves o errores de dedo. No tiene que capturar nada.</p>
+          </article>
+          <article class="content-card">
+            <p class="eyebrow">02 / Identificación</p>
+            <h3>Cada renglón se busca en tu catálogo</h3>
+            <p>El borrador trae clave, existencia y precio de tu lista. Si una pieza puede ser dos cosas, o no alcanza la existencia, el renglón llega marcado.</p>
+          </article>
+          <article class="content-card">
+            <p class="eyebrow">03 / Revisión</p>
+            <h3>Tu vendedor aprueba y envía</h3>
+            <p>Resuelve los renglones marcados, ajusta lo que haga falta y le contesta al cliente desde el mismo número de siempre.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="piloto">
+      <div class="wrap prose">
+        <p class="eyebrow">Piloto</p>
+        <h2 id="piloto">Diez días hábiles con tus propias solicitudes</h2>
+        <p>Antes de empezar medimos cuánto tarda hoy una cotización en salir, con diez solicitudes tuyas. Al final comparamos contra ese número.</p>
+        <ul class="scope-list">
+          <li><span>Qué cubre</span><div>Una línea de producto, un canal de entrada y hasta 100 solicitudes.</div></li>
+          <li><span>Qué necesitamos</span><div>Tu catálogo y lista de precios en Excel, y 20 solicitudes anteriores para calibrar.</div></li>
+          <li><span>Qué no cambia</span><div>Tu sistema, tu número de WhatsApp y quién le contesta al cliente.</div></li>
+          <li><span>Qué recibes al final</span><div>Una hoja con el tiempo antes y después, los renglones identificados sin ayuda y los que necesitaron a una persona.</div></li>
+          <li><span>Tu lista de precios</span><div>Firmamos carta de confidencialidad. No se comparte ni se reutiliza.</div></li>
+          <li><span>Precio</span><div>$4,900 MXN + IVA. Si tus cotizaciones no salen más rápido que antes, te devolvemos el dinero.</div></li>
+        </ul>
+        <h3>Explora los otros servicios</h3>
+        <p><a href="/automatizacion-ia/">Automatización con IA</a></p>
+        <p><a href="/captacion-seguimiento-comercial/">Captación y seguimiento comercial</a></p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="empezar">
+      <div class="wrap cta-panel">
+        <p class="eyebrow">Primer paso</p>
+        <h2 id="empezar">Mándanos una solicitud real de la semana pasada.</h2>
+        <p>Quita el nombre del cliente si quieres. En una llamada de 15 minutos revisamos cómo se cotizó y si el piloto tiene sentido en tu mostrador.</p>
+        <a class="button button-primary" href="https://wa.me/528132379135?text=Hola%2C%20Diego.%20Quiero%20probar%20el%20piloto%20de%20cotizaciones%20en%20mi%20distribuidora." data-contact="whatsapp" data-placement="cotizaciones-cierre">Pedir el piloto por WhatsApp</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <a class="wordmark" href="/" aria-label="Oranday Studio AI, inicio"><img src="/assets/wordmark-inverse.svg?v=4" width="144" height="48" alt="Oranday Studio AI"></a>
+        <p>Estudio de diseño web, captación e IA en Monterrey, Nuevo León.</p>
+      </div>
+      <nav aria-label="Navegación del pie">
+        <a href="/#servicios">Servicios</a>
+        <a href="/automatizacion-ia/">Automatización con IA</a>
+        <a href="/aviso-de-privacidad/">Privacidad</a>
+        <a href="mailto:contacto@orandaystudio.com">contacto@orandaystudio.com</a>
+      </nav>
+    </div>
+  </footer>
+  <script>
+  (function () {
+    // Datos ficticios de la demostración.
+    var lines = [
+      { asked:'4 baleros 6205 2rs', qty:4, unit:'pza', options:[{code:'BAL-6205-2RS', name:'Balero rígido de bolas 6205-2RS', stock:36, price:84}] },
+      { asked:'2 chumaceras de piso 1 1/4', qty:2, unit:'pza', options:[{code:'CHU-UCP206-20', name:'Chumacera de piso UCP206-20, eje 1 1/4"', stock:5, price:412}] },
+      { asked:'banda B-52 son 6', qty:6, unit:'pza', options:[{code:'BAN-B52', name:'Banda en V sección B, 52"', stock:14, price:138.5}] },
+      { asked:'10 mts manguera hidraulica 1/2 R2', qty:10, unit:'m', options:[{code:'MAN-R2-08', name:'Manguera hidráulica SAE 100R2, 1/2"', stock:120, price:96}] },
+      { asked:'1 reten 35x52x7', qty:1, unit:'pza', why:'Hay dos retenes con esa medida. Elige cuál.',
+        options:[{code:'', name:'Elegir…'},{code:'RET-35527-NBR', name:'Retén 35x52x7 de nitrilo, un labio', stock:22, price:38},{code:'RET-35527-VIT', name:'Retén 35x52x7 de vitón, doble labio', stock:4, price:117}] },
+      { asked:'3 baleros 6308 zz c3', qty:3, unit:'pza', options:[{code:'BAL-6308-ZZC3', name:'Balero rígido de bolas 6308-ZZ/C3', stock:2, price:356}] },
+      { asked:'cople lovejoy L-100', qty:1, unit:'pza', why:'No dice si quiere el cople completo o solo una pieza. Elige.',
+        options:[{code:'', name:'Elegir…'},{code:'COP-L100-JGO', name:'Cople de quijada L-100 completo (2 mazas y araña)', stock:7, price:498},{code:'COP-L100-ARA', name:'Araña de repuesto para cople L-100', stock:19, price:92}] }
+    ];
+    var chosen = lines.map(function () { return 0; });
+    var byId = function (id) { return document.getElementById(id); };
+    var money = function (n) { return '$' + n.toLocaleString('es-MX', {minimumFractionDigits:2, maximumFractionDigits:2}); };
+
+    function render() {
+      var body = byId('quote-rows'); body.innerHTML = '';
+      var total = 0, pending = 0, short = 0;
+      lines.forEach(function (line, i) {
+        var opt = line.options[chosen[i]];
+        var open = !opt.code;
+        if (open) pending++;
+        var tr = document.createElement('tr');
+        if (open) tr.className = 'needs-review';
+        var piece;
+        if (line.options.length > 1) {
+          piece = '<select data-line="' + i + '" aria-label="Pieza para ' + line.asked + '">' + line.options.map(function (o, j) {
+            return '<option value="' + j + '"' + (j === chosen[i] ? ' selected' : '') + '>' + (o.code ? o.code + ' · ' : '') + o.name + '</option>';
+          }).join('') + '</select>' + (open ? '<span class="quote-flag">' + line.why + '</span>' : '');
+        } else {
+          piece = '<strong>' + opt.code + '</strong> · ' + opt.name;
+        }
+        var stock = '—', price = '—', amount = '—';
+        if (!open) {
+          var missing = opt.stock < line.qty;
+          if (missing) short++;
+          stock = opt.stock + ' ' + line.unit + (missing ? '<span class="quote-flag">Faltan ' + (line.qty - opt.stock) + '</span>' : '');
+          price = money(opt.price);
+          amount = money(opt.price * line.qty);
+          total += opt.price * line.qty;
+        }
+        tr.innerHTML = '<td>' + piece + '<span class="quote-asked">Pidió: «' + line.asked + '»</span></td>' +
+          '<td class="num">' + line.qty + ' ' + line.unit + '</td><td class="num">' + stock + '</td><td class="num">' + price + '</td><td class="num">' + amount + '</td>';
+        body.appendChild(tr);
+      });
+      byId('quote-total').textContent = money(total);
+      var text = (lines.length - pending) + ' de ' + lines.length + ' piezas identificadas.';
+      text += pending ? ' ' + pending + ' por elegir antes de enviar.' : ' Lista para que el vendedor la envíe.';
+      if (short) text += ' ' + short + ' con existencia menor a lo pedido.';
+      byId('quote-status').textContent = text;
+    }
+
+    byId('quote-rows').addEventListener('change', function (e) {
+      if (e.target.tagName === 'SELECT') { chosen[+e.target.dataset.line] = +e.target.value; render(); }
+    });
+    byId('quote-run').addEventListener('click', function () {
+      byId('quote-empty').hidden = true; byId('quote-result').hidden = false;
+      this.disabled = true; this.textContent = 'Borrador preparado';
+      render();
+    });
+  })();
+  </script>
+</body>
+</html>
