@@ -14,7 +14,8 @@ Datos del negocio:
 Cómo trabaja:
 
 - Primero hace un diagnóstico: una sesión con el dueño o responsable y un documento con las tres mejoras de mayor retorno, cada una con alcance, precio y tiempo.
-- El diagnóstico cuesta $3,500 MXN + IVA y se abona completo si el cliente contrata alguna mejora.
+- La primera llamada (15 minutos, por WhatsApp o videollamada) es gratis.
+- El diagnóstico cuesta $1,500 MXN + IVA y se abona completo si el cliente contrata alguna mejora.
 - En las automatizaciones, la IA prepara y una persona del negocio aprueba cotizaciones, compromisos y respuestas sensibles.
 - Si no hay nada que convenga automatizar, lo dice.
 

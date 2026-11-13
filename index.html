@@ -26,10 +26,12 @@
   <link rel="stylesheet" href="/experience.css">
   <link rel="stylesheet" href="/beams.css">
   <link rel="stylesheet" href="/refinements.css">
+  <link rel="stylesheet" href="/system.css">
   <script src="/script.js" defer></script>
   <script src="/experience.js" defer></script>
   <script src="/beams.js" defer></script>
   <script src="/refinements.js" defer></script>
+  <script src="/system.js" defer></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -55,7 +57,7 @@
             "@type": "OfferCatalog",
             "name": "Servicios de Oranday Studio AI",
             "itemListElement": [
-              { "@type": "Offer", "price": "3500", "priceCurrency": "MXN", "itemOffered": { "@type": "Service", "name": "Diagnóstico de procesos con IA", "url": "https://orandaystudio.com/diagnostico/" } },
+              { "@type": "Offer", "price": "1500", "priceCurrency": "MXN", "itemOffered": { "@type": "Service", "name": "Diagnóstico de procesos con IA", "url": "https://orandaystudio.com/diagnostico/" } },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatización con IA", "url": "https://orandaystudio.com/automatizacion-ia/" } },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diseño web y posicionamiento", "url": "https://orandaystudio.com/diseno-web-posicionamiento/" } },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Captación y seguimiento comercial", "url": "https://orandaystudio.com/captacion-seguimiento-comercial/" } }
@@ -90,9 +92,9 @@
     <div class="wrap header-inner">
       <a class="wordmark" href="/" aria-label="Oranday Studio AI, inicio"><img src="/assets/wordmark-inverse.svg?v=4" width="144" height="48" alt="Oranday Studio AI"></a>
       <nav class="site-nav home-nav" id="main-navigation" aria-label="Navegación principal">
-        <a href="#servicios">Soluciones</a><a href="#demo">En acción</a><a href="#proceso">Cómo trabajamos</a><a href="/diagnostico/">Diagnóstico</a>
+        <a href="#servicios">Soluciones</a><a href="#demo">En acción</a><a href="#proceso">Cómo trabajamos</a><a href="#sistema">Tu sistema</a><a href="/diagnostico/">Diagnóstico</a>
       </nav>
-      <a class="button button-primary header-cta" href="/diagnostico/">Diagnóstico <span aria-hidden="true">↗</span></a>
+      <a class="button button-primary header-cta" href="https://wa.me/528132379135?text=Hola%2C%20Diego.%20Quiero%20agendar%20la%20llamada%20gratis%20de%2015%20minutos%20para%20mi%20negocio." data-contact="whatsapp" data-placement="header">Llamada gratis <span aria-hidden="true">↗</span></a>
       <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-navigation" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button>
     </div>
   </header>
@@ -104,10 +106,10 @@
           <h1 id="hero-title">Primero entendemos tu negocio.<br> <span>Después lo automatizamos.</span></h1>
           <p class="lead">Revisamos cómo vendes y cómo operas, y construimos lo que más te regresa: automatizaciones con IA, una mejor web y un seguimiento comercial que no deja consultas sin contestar.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="/diagnostico/">Empezar con un diagnóstico <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="https://wa.me/528132379135?text=Hola%2C%20Diego.%20Quiero%20agendar%20la%20llamada%20gratis%20de%2015%20minutos%20para%20mi%20negocio." data-contact="whatsapp" data-placement="hero">Agenda una llamada gratis <span aria-hidden="true">↗</span></a>
             <a class="button button-secondary" href="#demo"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m7 4 9 6-9 6V4Z" stroke="currentColor"/></svg> Ver cómo funciona</a>
           </div>
-          <p class="hero-note">Desde Monterrey, para negocios de todo México.</p>
+          <p class="hero-note">15 minutos por WhatsApp o videollamada, sin costo. Desde Monterrey para todo México.</p>
         </div>
         <div class="hero-stage" id="demo">
           <div class="hero-stage-heading"><h2 class="eyebrow">De una consulta a un siguiente paso.</h2><a href="/demo/">Explorar la demo <span aria-hidden="true">↗</span></a></div>
@@ -133,8 +135,10 @@
         <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5A8.5 8.5 0 0 1 12.5 20a10 10 0 0 1-4-.9L3 21l1.9-5.5a10 10 0 0 1-.9-4A8.5 8.5 0 0 1 12.5 3h.5a8.5 8.5 0 0 1 8 8v.5Z"/></svg> WhatsApp</span>
       </div>
       <div class="experience-lead">
-        <div class="experience-lead-meta"><span class="experience-avatar" aria-hidden="true" data-experience-value="initials">MR</span><div><strong data-experience-value="name">Mariana R.</strong><span data-experience-value="company">Oficinas en Monterrey</span></div><span class="experience-time">Ahora</span></div>
+        <div class="experience-lead-meta"><span class="experience-avatar" aria-hidden="true" data-experience-value="initials">MR</span><div><strong data-experience-value="name">Mariana R.</strong><span data-experience-value="company">Oficinas en Monterrey</span></div><span class="experience-time experience-wait" data-experience-value="waitLabel">Ahora</span></div>
         <p data-experience-value="request">Hola. Busco limpieza para nuestras oficinas dos veces por semana. ¿Me pueden cotizar?</p>
+        <div class="experience-chips" aria-hidden="true"><span><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><b data-experience-value="chip1"></b></span><span><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><b data-experience-value="chip2"></b></span></div>
+        <span class="experience-scan" aria-hidden="true"></span>
         <div class="experience-lead-footer"><span class="experience-small-dot" aria-hidden="true"></span><span data-experience-value="leadStatus">Nueva consulta recibida</span><span aria-hidden="true">↗</span></div>
       </div>
       <div class="experience-record">
@@ -159,6 +163,7 @@
           <div class="experience-thinking"><span></span><span></span><span></span><p data-experience-value="thinking">Consulta lista para analizar</p></div>
           <div class="experience-bubble experience-bubble-out"><span class="experience-reply-label" data-experience-value="replyLabel">Borrador sugerido por IA</span><p data-experience-value="reply">¡Hola, Mariana! ¿Cuántos metros cuadrados necesitan cubrir y qué horario les funciona?</p><span class="experience-reply-note" data-experience-value="replyNote">Tu equipo revisa antes de enviar</span></div>
           <div class="experience-next"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 11h18m-11 5 2 2 4-4"/></svg><div><strong data-experience-value="nextTitle">Seguimiento preparado</strong><span data-experience-value="next">Confirmar superficie y horario.</span></div></div>
+          <div class="experience-approve" aria-hidden="true"><span class="experience-approve-btn"><span class="experience-approve-text">Aprobar y enviar</span><span class="experience-approve-done">Enviado ✓</span></span><i class="experience-ripple"></i><svg class="experience-cursor" viewBox="0 0 24 24"><path d="M5 3l14 8-6 2-2 6z"/></svg></div>
         </div>
         <div class="experience-phone-input" aria-hidden="true"><span>Un siguiente paso claro.</span><svg viewBox="0 0 24 24"><path d="m5 12 14-7-5 14-2-7-7-2Z"/></svg></div>
         <div class="experience-homebar" aria-hidden="true"></div>
@@ -172,7 +177,7 @@
   </div>
   <div class="experience-steps" role="group" aria-label="Etapas de la demostración" data-experience-controls hidden>
     <button type="button" data-experience-step="0" aria-pressed="true"><span>01</span> Consulta<i aria-hidden="true"></i></button>
-    <button type="button" data-experience-step="1" aria-pressed="false"><span>02</span> IA organiza<i aria-hidden="true"></i></button>
+    <button type="button" data-experience-step="1" aria-pressed="false"><span>02</span> Oranday organiza<i aria-hidden="true"></i></button>
     <button type="button" data-experience-step="2" aria-pressed="false"><span>03</span> Tu equipo revisa<i aria-hidden="true"></i></button>
     <button type="button" data-experience-step="3" aria-pressed="false"><span>04</span> Seguimiento<i aria-hidden="true"></i></button>
   </div>
@@ -230,10 +235,129 @@
         </div>
       </div>
     </section>
+    <section class="section section-divider" id="sistema" aria-labelledby="system-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><p class="eyebrow">02 / Tu propio sistema</p><h2 id="system-title">Todo tu negocio,<br><span>en una sola pantalla.</span></h2></div>
+          <p>También construimos el software de tu negocio: consultas, cotizaciones, clientes y reportes en un solo lugar, con tu nombre y un asistente que te contesta lo que necesitas saber. Explora este ejemplo.</p>
+        </div>
+        <div class="system" data-system>
+          <div class="system-window">
+            <div class="system-shell">
+              <div class="system-top" aria-hidden="true"><span class="system-dots"><i></i><i></i><i></i></span><span class="system-address">sistema.tunegocio.mx</span><span class="system-live"><i></i>En vivo · ejemplo</span></div>
+              <div class="system-body">
+                <div class="system-nav" role="tablist" aria-label="Módulos del sistema de ejemplo" aria-orientation="vertical">
+              <span class="system-brand"><img src="/assets/mark-inverse.svg?v=4" width="22" height="22" alt="">Tu negocio</span>
+              <button type="button" class="system-tab" role="tab" id="system-tab-inicio" aria-controls="system-panel-inicio" aria-selected="true" tabindex="0" data-system-tab><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1z"/></svg>Inicio</button>
+              <button type="button" class="system-tab" role="tab" id="system-tab-consultas" aria-controls="system-panel-consultas" aria-selected="false" tabindex="-1" data-system-tab><svg viewBox="0 0 24 24"><path d="M21 11.5A8.5 8.5 0 0 1 12.5 20a10 10 0 0 1-4-.9L3 21l1.9-5.5a10 10 0 0 1-.9-4A8.5 8.5 0 0 1 12.5 3h.5a8.5 8.5 0 0 1 8 8z"/></svg>Consultas</button>
+              <button type="button" class="system-tab" role="tab" id="system-tab-cotizaciones" aria-controls="system-panel-cotizaciones" aria-selected="false" tabindex="-1" data-system-tab><svg viewBox="0 0 24 24"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4M9 12h6M9 16h4"/></svg>Cotizaciones</button>
+              <button type="button" class="system-tab" role="tab" id="system-tab-reportes" aria-controls="system-panel-reportes" aria-selected="false" tabindex="-1" data-system-tab><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Reportes</button>
+              <button type="button" class="system-tab" role="tab" id="system-tab-asistente" aria-controls="system-panel-asistente" aria-selected="false" tabindex="-1" data-system-tab><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/><circle cx="12" cy="12" r="3"/></svg>Asistente</button>
+                  <p class="system-nav-foot">Hecho a la medida de tu operación.</p>
+                </div>
+                <div class="system-main">
+                  <div class="system-panel" id="system-panel-inicio" role="tabpanel" aria-labelledby="system-tab-inicio" data-system-panel="inicio">
+                    <div class="system-panel-head"><h3>Buenos días</h3><span>Hoy · datos ficticios</span></div>
+                    <div class="system-kpis">
+                      <div class="system-kpi"><span>Consultas hoy</span><strong data-count="18">18</strong><small>6 sin contestar antes</small></div>
+                      <div class="system-kpi"><span>Cotizaciones abiertas</span><strong data-count="7">7</strong><small>3 con borrador listo</small></div>
+                      <div class="system-kpi"><span>Tiempo de respuesta</span><strong data-count="4" data-suffix=" min">4 min</strong><small>Promedio de la semana</small></div>
+                      <div class="system-kpi"><span>Por cobrar</span><strong data-count="48300" data-prefix="$">$48,300</strong><small>5 facturas</small></div>
+                    </div>
+                    <div class="system-split">
+                      <div class="system-card">
+                        <p class="system-card-title"><span>Consultas por día</span><span>14 días</span></p>
+                        <svg class="system-chart" viewBox="0 0 400 150" preserveAspectRatio="none" aria-hidden="true">
+                          <defs><linearGradient id="system-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9efff" stop-opacity=".28"/><stop offset="1" stop-color="#e9efff" stop-opacity="0"/></linearGradient></defs>
+                          <path class="grid" d="M0 40H400M0 80H400M0 120H400"/>
+                          <path class="area" d="M0 110 L30.8 95 L61.5 105 L92.3 85 L123.1 90 L153.8 70 L184.6 80 L215.4 75 L246.2 55 L276.9 65 L307.7 45 L338.5 50 L369.2 30 L400 20 L400 150 L0 150Z"/>
+                          <path class="line" pathLength="1" d="M0 110 L30.8 95 L61.5 105 L92.3 85 L123.1 90 L153.8 70 L184.6 80 L215.4 75 L246.2 55 L276.9 65 L307.7 45 L338.5 50 L369.2 30 L400 20"/>
+                          <circle class="dot" cx="400" cy="20" r="4"/>
+                        </svg>
+                      </div>
+                      <div class="system-card">
+                        <p class="system-card-title"><span>Actividad</span><span>En vivo</span></p>
+                        <ul class="system-feed" data-system-feed aria-live="off">
+                          <li class="system-feed-item"><i aria-hidden="true"></i><div><strong>Pago registrado</strong><span>Taller Apodaca · $8,900</span></div><time>ahora</time></li>
+                          <li class="system-feed-item"><i aria-hidden="true"></i><div><strong>Seguimiento</strong><span>Retomar con Paola S. mañana 10:00</span></div><time>hace 2 min</time></li>
+                          <li class="system-feed-item"><i aria-hidden="true"></i><div><strong>Cotización enviada</strong><span>Distribuidora del Norte · $12,480</span></div><time>hace 4 min</time></li>
+                          <li class="system-feed-item"><i aria-hidden="true"></i><div><strong>Borrador listo</strong><span>Cotización COT-1043 espera revisión</span></div><time>hace 6 min</time></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="system-panel" id="system-panel-consultas" role="tabpanel" aria-labelledby="system-tab-consultas" data-system-panel="consultas" hidden>
+                    <div class="system-panel-head"><h3>Consultas</h3><span>Cada una con responsable</span></div>
+                    <div class="system-board">
+                      <div class="system-column"><p><span>Nuevas</span><span>2</span></p>
+                        <div class="system-lead is-hot"><strong>Alejandro G.</strong><span>3 climas para cafetería · San Pedro</span><em>Borrador listo</em></div>
+                        <div class="system-lead"><strong>Daniela M.</strong><span>Banquete 80 personas · diciembre</span><em>Falta la fecha</em></div>
+                      </div>
+                      <div class="system-column"><p><span>Cotizadas</span><span>2</span></p>
+                        <div class="system-lead"><strong>Distribuidora del Norte</strong><span>Baleros y bandas · $12,480</span><em>Seguimiento hoy</em></div>
+                        <div class="system-lead"><strong>Lucía C.</strong><span>Paneles para taller</span><em>Esperando recibo</em></div>
+                      </div>
+                      <div class="system-column"><p><span>Ganadas</span><span>2</span></p>
+                        <div class="system-lead"><strong>Taller Apodaca</strong><span>Mantenimiento · $8,900</span><em>Pagado</em></div>
+                        <div class="system-lead"><strong>Paola S.</strong><span>Valoración de ortodoncia</span><em>Cita jueves</em></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="system-panel" id="system-panel-cotizaciones" role="tabpanel" aria-labelledby="system-tab-cotizaciones" data-system-panel="cotizaciones" hidden>
+                    <div class="system-panel-head"><h3>Cotizaciones</h3><span>Ninguna sale sin aprobación</span></div>
+                    <table class="system-table">
+                      <thead><tr><th>Folio</th><th>Cliente</th><th class="hide-sm">Total</th><th>Estado</th></tr></thead>
+                      <tbody>
+                        <tr><td class="num">COT-1043</td><td>Alejandro G.</td><td class="num hide-sm">$38,600</td><td><span class="system-status is-draft">Borrador de IA</span></td></tr>
+                        <tr><td class="num">COT-1042</td><td>Distribuidora del Norte</td><td class="num hide-sm">$12,480</td><td><span class="system-status">Enviada</span></td></tr>
+                        <tr><td class="num">COT-1041</td><td>Lucía C.</td><td class="num hide-sm">$96,000</td><td><span class="system-status">En revisión</span></td></tr>
+                        <tr><td class="num">COT-1040</td><td>Taller Apodaca</td><td class="num hide-sm">$8,900</td><td><span class="system-status is-won">Aceptada</span></td></tr>
+                        <tr><td class="num">COT-1039</td><td>Daniela M.</td><td class="num hide-sm">$54,200</td><td><span class="system-status">Enviada</span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="system-panel" id="system-panel-reportes" role="tabpanel" aria-labelledby="system-tab-reportes" data-system-panel="reportes" hidden>
+                    <div class="system-panel-head"><h3>¿De dónde llegan tus clientes?</h3><span>Este mes</span></div>
+                    <div class="system-card">
+                      <div class="system-bars" aria-label="Consultas por canal: WhatsApp 64, página web 38, Google 27, recomendación 15">
+                        <div class="system-bar"><b>64</b><i style="--h:100%"></i><span>WhatsApp</span></div>
+                        <div class="system-bar"><b>38</b><i style="--h:59%"></i><span>Página web</span></div>
+                        <div class="system-bar"><b>27</b><i style="--h:42%"></i><span>Google</span></div>
+                        <div class="system-bar"><b>15</b><i style="--h:23%"></i><span>Recomendación</span></div>
+                      </div>
+                    </div>
+                    <div class="system-kpis" style="margin-top:10px">
+                      <div class="system-kpi"><span>Consultas del mes</span><strong data-count="144">144</strong></div>
+                      <div class="system-kpi"><span>Cotizadas</span><strong data-count="61">61</strong></div>
+                      <div class="system-kpi"><span>Ganadas</span><strong data-count="19">19</strong></div>
+                      <div class="system-kpi"><span>Vendido</span><strong data-count="412000" data-prefix="$">$412,000</strong></div>
+                    </div>
+                  </div>
+                  <div class="system-panel" id="system-panel-asistente" role="tabpanel" aria-labelledby="system-tab-asistente" data-system-panel="asistente" hidden>
+                    <div class="system-panel-head"><h3>Asistente</h3><span>Pregúntale a tu sistema</span></div>
+                    <div class="system-chat" data-system-chat>
+                      <p class="system-msg is-user">¿Qué cotizaciones necesitan seguimiento esta semana?</p>
+                      <div class="system-msg is-bot"><small>ASISTENTE · TU NEGOCIO</small><span data-system-answer data-text="Tienes 3 cotizaciones sin respuesta del cliente. Te preparé un mensaje de seguimiento para cada una; revísalos antes de enviar.">Tienes 3 cotizaciones sin respuesta del cliente. Te preparé un mensaje de seguimiento para cada una; revísalos antes de enviar.</span>
+                        <ul data-system-answer-list><li><b>Distribuidora del Norte</b><span>$12,480 · 3 días</span></li><li><b>Daniela M.</b><span>$54,200 · 2 días</span></li><li><b>Lucía C.</b><span>$96,000 · 1 día</span></li></ul>
+                        <span class="system-msg-action">Revisar mensajes</span></div>
+                      <div class="system-input" aria-hidden="true"><span>Pregunta algo sobre tu negocio…</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m5 12 14-7-5 14-2-7-7-2Z"/></svg></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="system-foot">
+            <p class="hero-note">Sistema de ejemplo con datos ficticios. El tuyo se diseña según cómo trabaja tu negocio.</p>
+            <a class="button button-primary" href="https://wa.me/528132379135?text=Hola%2C%20Diego.%20Vi%20el%20sistema%20de%20ejemplo%20en%20tu%20p%C3%A1gina%20y%20quiero%20uno%20para%20mi%20negocio." data-contact="whatsapp" data-placement="sistema">Quiero un sistema así <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section section-divider" id="resultados" aria-labelledby="fit-title">
       <div class="wrap">
         <div class="possibilities">
-          <div class="possibility-intro"><p class="eyebrow">02 / Tu punto de partida</p><h2 id="fit-title">Tu negocio es único.<br>Tu solución también.</h2><p>Trabajamos con empresas de servicios, comercios y equipos que quieren mejorar cómo venden y operan. El proyecto empieza con un problema concreto.</p></div>
+          <div class="possibility-intro"><p class="eyebrow">03 / Tu punto de partida</p><h2 id="fit-title">Tu negocio es único.<br>Tu solución también.</h2><p>Trabajamos con empresas de servicios, comercios y equipos que quieren mejorar cómo venden y operan. El proyecto empieza con un problema concreto.</p></div>
           <div class="fit-picker" data-fit-picker>
             <p id="fit-question">¿Qué te gustaría mejorar primero?</p>
             <div class="fit-options" role="group" aria-labelledby="fit-question">
@@ -250,9 +374,9 @@
     </section>
     <section class="section section-divider" id="proceso" aria-labelledby="process-title">
       <div class="wrap">
-        <div class="section-heading"><div><p class="eyebrow">03 / Del problema al proyecto</p><h2 id="process-title">Claro desde el inicio.<br><span>Útil desde la entrega.</span></h2></div><p>Trabajas directamente con el estudio. Definimos qué construir, lo pruebas y te acompañamos a ponerlo en marcha.</p></div>
+        <div class="section-heading"><div><p class="eyebrow">04 / Del problema al proyecto</p><h2 id="process-title">Claro desde el inicio.<br><span>Útil desde la entrega.</span></h2></div><p>Trabajas directamente con el estudio. Definimos qué construir, lo pruebas y te acompañamos a ponerlo en marcha.</p></div>
         <ol class="process-grid">
-          <li class="process-card"><span class="process-index">01</span><h3>Diagnosticamos tu operación.</h3><p>En una sesión revisamos cómo te encuentran, cómo vendes y qué tareas repite tu equipo. Recibes las tres mejoras con más retorno, con alcance y precio.</p><p class="step-detail"><a href="/diagnostico/">Ver qué incluye el diagnóstico →</a></p></li>
+          <li class="process-card"><span class="process-index">01</span><h3>Platicamos y diagnosticamos.</h3><p>Empezamos con una llamada gratis de 15 minutos. Si tiene sentido, hacemos el diagnóstico: revisamos cómo te encuentran, cómo vendes y qué repite tu equipo, y recibes las tres mejoras con más retorno.</p><p class="step-detail"><a href="/diagnostico/">Ver qué incluye el diagnóstico →</a></p></li>
           <li class="process-card"><span class="process-index">02</span><h3>Diseñamos y construimos.</h3><p>Recibes alcance, precio y fecha antes de arrancar. Ves avances y pruebas la solución con ejemplos de tu negocio.</p><p class="step-detail">Un alcance definido. Avances visibles.</p></li>
           <li class="process-card"><span class="process-index">03</span><h3>Conectamos y afinamos.</h3><p>Probamos el recorrido, dejamos accesos e instrucciones y acordamos cómo medir y revisar el resultado.</p><p class="step-detail">Tu equipo listo. Un siguiente paso claro.</p></li>
         </ol>
@@ -261,22 +385,22 @@
     </section>
     <section class="section section-divider" id="faq" aria-labelledby="faq-title">
       <div class="wrap faq-grid">
-        <div><p class="eyebrow">04 / Antes de empezar</p><h2 id="faq-title">Lo que quizá<br>te estás preguntando.</h2></div>
+        <div><p class="eyebrow">05 / Antes de empezar</p><h2 id="faq-title">Lo que quizá<br>te estás preguntando.</h2></div>
         <div class="faq-list">
           <details><summary>¿Puedo contratar solo una landing page?</summary><p>Sí. Podemos empezar con una landing que presente un servicio, facilite el contacto y permita medir las acciones importantes. El alcance también puede incluir identidad visual y contenidos si tu proyecto lo necesita.</p></details>
           <details><summary>¿Qué puede automatizar la IA en mi empresa?</summary><p>Por ejemplo, clasificar consultas, extraer información de documentos, preparar respuestas y convertir notas en tareas. Revisamos tus herramientas y elegimos un flujo con un resultado que puedas comprobar.</p></details>
           <details><summary>¿La IA responde todo por su cuenta?</summary><p>Definimos juntos qué puede ejecutar y qué necesita aprobación. Cotizaciones, compromisos y respuestas sensibles pasan por una persona. Siempre dejamos una forma de continuar el trabajo manualmente.</p></details>
           <details><summary>¿Solo trabajan con climas y paneles solares?</summary><p>Trabajamos con distintos negocios. Climatización y energía solar son ejemplos de empresas que reciben consultas y cotizaciones. Podemos adaptar el proyecto a otros servicios, comercios y equipos comerciales.</p></details>
           <details><summary>¿También ayudan a que me encuentren en Google?</summary><p>Sí. Trabajamos estructura, contenido y bases técnicas para buscadores. Revisamos Google Maps cuando tu negocio es elegible y el acceso del contenido público a la búsqueda de ChatGPT. El posicionamiento requiere seguimiento y no se garantiza una posición.</p></details>
-          <details><summary>¿Por dónde se empieza?</summary><p>Por el diagnóstico de procesos: una sesión y un documento con las tres mejoras que más te regresan, cada una con alcance, precio y tiempo. Cuesta $3,500 MXN + IVA y se abona completo si contratas alguna. Si no hay nada que convenga automatizar, te lo decimos.</p></details>
+          <details><summary>¿Por dónde se empieza?</summary><p>Por una llamada gratis de 15 minutos para entender tu negocio. Si hace sentido, sigue el diagnóstico de procesos: una sesión y un documento con las tres mejoras que más te regresan, cada una con alcance, precio y tiempo. Cuesta $1,500 MXN + IVA y se abona completo si contratas alguna. Si no hay nada que convenga automatizar, te lo decimos.</p></details>
           <details><summary>¿Cuánto cuesta y cuánto tarda un proyecto?</summary><p>Depende de la página, los flujos y las integraciones. Al terminar el diagnóstico recibes una propuesta con entregables, inversión y calendario. Las herramientas, suscripciones y pauta se separan del servicio.</p></details>
         </div>
       </div>
     </section>
     <section class="section wrap contact-section" id="contacto" aria-labelledby="contact-title">
       <div class="contact-surface">
-        <div><p class="eyebrow">El siguiente paso empieza aquí</p><h2 id="contact-title">Hagamos que<br>tu negocio avance.</h2><p>Cuéntanos qué vendes y qué te quita más tiempo. Agendamos el diagnóstico y sales con un plan concreto.</p></div>
-        <div class="contact-actions"><a class="button button-primary" href="https://wa.me/528132379135?text=Hola%2C%20Diego.%20Vi%20Oranday%20Studio%20y%20quiero%20agendar%20el%20diagn%C3%B3stico%20para%20mi%20negocio." data-contact="whatsapp" data-placement="final">Agendar diagnóstico <span aria-hidden="true">↗</span></a><p class="contact-note">Abrimos WhatsApp. $3,500 MXN + IVA, abonable al proyecto. <a href="/diagnostico/">Ver qué incluye</a>.</p></div>
+        <div><p class="eyebrow">El siguiente paso empieza aquí</p><h2 id="contact-title">Hablemos 15 minutos.<br>Sin costo.</h2><p>Cuéntanos qué vendes y qué te quita más tiempo. En la llamada te decimos qué automatizaríamos primero y cuánto costaría.</p></div>
+        <div class="contact-actions"><a class="button button-primary" href="https://wa.me/528132379135?text=Hola%2C%20Diego.%20Quiero%20agendar%20la%20llamada%20gratis%20de%2015%20minutos%20para%20mi%20negocio." data-contact="whatsapp" data-placement="final">Agendar llamada gratis <span aria-hidden="true">↗</span></a><p class="contact-note">Abrimos WhatsApp y acordamos la hora. Después, si te sirve, el <a href="/diagnostico/">diagnóstico completo</a> cuesta $1,500 MXN + IVA.</p></div>
       </div>
     </section>
   </main>

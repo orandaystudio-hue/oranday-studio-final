@@ -75,10 +75,10 @@
         const middle = (start.x + end.x) / 2;
         curves.push({ start, end, d: `M ${format(start)} C ${middle} ${start.y}, ${middle} ${end.y}, ${format(end)}` });
 
-        // Leave from the lower left edge so the return route avoids the engine label.
-        const followStart = point(coreRect, .18, 1);
+        // Leave from the left side of the engine so the return route never crosses its labels.
+        const followStart = point(coreRect, 0, .82);
         const followEnd = point(recordRect, 1, .5);
-        curves.push({ start: followStart, end: followEnd, d: `M ${format(followStart)} C ${followStart.x - 24} ${followStart.y + 25}, ${followEnd.x + 38} ${followEnd.y}, ${format(followEnd)}` });
+        curves.push({ start: followStart, end: followEnd, d: `M ${format(followStart)} C ${followStart.x - 34} ${followStart.y}, ${followEnd.x + 40} ${followEnd.y}, ${format(followEnd)}` });
       }
 
       svg.setAttribute('viewBox', `0 0 ${containerRect.width} ${containerRect.height}`);

@@ -23,3 +23,44 @@
 
 /* Seis ejemplos: en telefono el selector se parte en dos renglones de tres. */
 @media(max-width:700px){.experience-sectors{flex-wrap:wrap}.experience-sectors button{flex:1 1 30%;min-height:40px}}
+
+/* ---- Demo v2: espera, lectura, datos detectados y aprobación ---- */
+.experience .experience-time.experience-wait{margin-left:auto;padding:4px 9px;border-radius:999px;border:1px solid #ffffff2a;color:#c9cdd5;font-size:10px;font-variant-numeric:tabular-nums;white-space:nowrap;transition:background .3s,border-color .3s,color .3s}
+.experience[data-waiting=true] .experience-wait{color:#fff;border-color:#ffffffa0;background:#ffffff14}
+.experience[data-playing=true][data-waiting=true] .experience-wait{animation:exp-wait 1.1s ease-in-out infinite}
+@keyframes exp-wait{50%{box-shadow:0 0 0 4px #ffffff10;border-color:#ffffff60}}
+.experience-scan{position:absolute;left:10px;right:10px;top:12%;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,#fff,transparent);box-shadow:0 0 16px 2px #dfe8ff88;opacity:0;pointer-events:none}
+.experience[data-stage="1"] .experience-scan{animation:exp-scan 1.1s .15s ease-in-out both}
+@keyframes exp-scan{0%{opacity:0;top:12%}15%,85%{opacity:1}100%{opacity:0;top:88%}}
+.experience-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.experience-chips span{display:inline-flex;align-items:center;gap:5px;padding:5px 10px 5px 8px;border-radius:999px;background:#eceef2;color:#14161a;font-size:11px;line-height:1.2;opacity:0;transform:scale(.6) translateY(-6px)}
+.experience-chips b{font-weight:600}
+.experience .experience-chips svg{width:12px;height:12px;stroke-width:2.6}
+.experience[data-stage="1"] .experience-chips span{animation:exp-chip .45s .95s cubic-bezier(.34,1.56,.64,1) both}
+.experience[data-stage="1"] .experience-chips span+span{animation-delay:1.12s}
+.experience[data-stage="2"] .experience-chips span,.experience[data-stage="3"] .experience-chips span{opacity:1;transform:none}
+@keyframes exp-chip{to{opacity:1;transform:none}}
+.experience-conversation{position:relative;min-height:0}
+.experience-approve{position:absolute;left:12px;right:12px;bottom:12px;opacity:0;visibility:hidden;pointer-events:none}
+.experience[data-stage="2"] .experience-approve{visibility:visible;animation:exp-up .35s .1s both}
+@keyframes exp-up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.experience-approve-btn{position:relative;display:grid;place-items:center;height:42px;border-radius:11px;background:#eceef2;color:#14161a;font-size:12px;font-weight:600;box-shadow:0 8px 24px #0007}
+.experience-approve-text,.experience-approve-done{grid-area:1/1}
+.experience-approve-done{opacity:0}
+.experience[data-stage="2"] .experience-approve-btn{animation:exp-press .22s 1.4s both}
+.experience[data-stage="2"] .experience-approve-text{animation:exp-out .18s 1.55s both}
+.experience[data-stage="2"] .experience-approve-done{animation:exp-in .25s 1.62s both}
+@keyframes exp-press{50%{transform:scale(.95)}}
+@keyframes exp-out{to{opacity:0}}
+@keyframes exp-in{to{opacity:1}}
+.experience .experience-cursor{position:absolute;left:58%;top:42%;width:24px;height:24px;fill:#fff;stroke:#101216;stroke-width:1.3;opacity:0;filter:drop-shadow(0 3px 6px #000a)}
+.experience[data-stage="2"] .experience-cursor{animation:exp-cursor 1.65s .25s cubic-bezier(.45,0,.2,1) both}
+@keyframes exp-cursor{0%{opacity:0;transform:translate(80px,70px)}20%{opacity:1}72%{transform:translate(0,0)}80%{transform:scale(.82)}88%,100%{opacity:1;transform:none}}
+.experience-ripple{position:absolute;left:58%;top:42%;width:34px;height:34px;margin:-10px 0 0 -10px;border-radius:50%;border:2px solid #fff;opacity:0;pointer-events:none}
+.experience[data-stage="2"] .experience-ripple{animation:exp-ripple .65s 1.42s ease-out both}
+@keyframes exp-ripple{from{opacity:.9;transform:scale(.3)}to{opacity:0;transform:scale(3)}}
+@media(min-width:1000px){.experience-phone{width:278px}}
+@media(max-width:700px){.experience .experience-time.experience-wait{display:inline-block;font-size:9px;padding:3px 7px}.experience-chips span{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.experience[data-stage="1"] .experience-chips span{opacity:1;transform:none}.experience[data-stage="2"] .experience-approve{opacity:1}.experience[data-stage="2"] .experience-approve-text{opacity:0}.experience[data-stage="2"] .experience-approve-done{opacity:1}}
+/* Teléfono más compacto para que quepa completo en pantallas de 700 px de alto. */
+.experience-phone-header{padding:12px 12px 10px}.experience-conversation{padding:12px 12px 10px}.experience-chat-date{margin-bottom:10px}.experience-thinking{min-height:32px;padding-block:4px}.experience-next{margin-top:10px}.experience-phone-input{padding:9px 13px}.experience-scene{padding-top:26px;padding-bottom:22px}
