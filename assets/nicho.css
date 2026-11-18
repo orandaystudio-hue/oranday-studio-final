@@ -1,0 +1,68 @@
+/* Landings por nicho (/consultorios/, /barberias/, /restaurantes/) y formulario de leads. */
+:root{--lima:#C6F135;--lima-ink:#0b0d08}
+html,body{overflow-x:hidden}
+.n-hero{padding-block:clamp(2.5rem,7vw,6rem);border-bottom:1px solid var(--border);background:radial-gradient(ellipse at 80% 0%,#c6f13512,transparent 60%)}
+.n-hero h1{font-size:clamp(2.3rem,6vw,4.8rem);max-width:58rem}
+.n-hero h1 em{font-style:normal;color:var(--lima)}
+.n-hero .lead{max-width:40rem;margin-top:1.3rem}
+.n-hero .button-row{margin-top:1.7rem}
+.n-badge{display:inline-flex;align-items:center;gap:.55rem;border:1px solid #c6f13540;border-radius:99px;padding:.4rem .8rem;font-size:.7rem;letter-spacing:.06em;color:var(--lima);margin-bottom:1.3rem}
+.n-badge i{width:6px;height:6px;border-radius:50%;background:var(--lima);box-shadow:0 0 10px var(--lima)}
+.button-lima{background:var(--lima);color:var(--lima-ink);font-weight:650}
+.button-lima:hover{background:#d4f75e}
+.n-note{margin-top:1rem;font-size:.75rem;color:var(--subtle)}
+.n-h2{font-size:clamp(1.9rem,4vw,3.1rem);max-width:44rem}
+.n-sub{color:var(--secondary);max-width:40rem;margin-top:1rem}
+.n-scene{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+.n-card{border:1px solid var(--border);border-radius:14px;background:var(--surface);padding:1.5rem;min-width:0}
+.n-card h3{font-size:1.2rem}
+.n-card p{color:var(--secondary);font-size:.92rem;margin-top:.6rem}
+.n-card.after{border-color:#c6f13550;background:linear-gradient(160deg,#c6f1350a,#111317)}
+.n-tag{display:inline-block;font:500 .65rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:.35rem .55rem;border-radius:6px;background:#ffffff0d;color:var(--secondary);margin-bottom:1rem}
+.after .n-tag{background:#c6f13522;color:var(--lima)}
+.chat{display:flex;flex-direction:column;gap:.5rem;margin-top:1rem}
+.msg{max-width:88%;padding:.6rem .8rem;border-radius:12px;font-size:.84rem;line-height:1.45;background:#1d2129;color:#dfe3ea;overflow-wrap:anywhere}
+.msg.me{align-self:flex-end;background:#26301a;color:#eaf6cf}
+.msg small{display:block;font-size:.66rem;color:#8e949f;margin-top:.25rem}
+.msg.miss{border:1px dashed #4a505b;background:transparent;color:#8e949f}
+.n-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;list-style:none;padding:0;margin:2rem 0 0}
+.n-steps li{border-top:1px solid #4a505b;padding-top:1.2rem}
+.n-steps b{display:block;font:500 .75rem var(--mono);color:var(--lima);margin-bottom:1rem}
+.n-steps h3{font-size:1.25rem}
+.n-steps p{color:var(--secondary);font-size:.9rem;margin-top:.6rem}
+.n-list{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;list-style:none;padding:0;margin:2rem 0 0}
+.n-list li{display:flex;gap:.8rem;align-items:flex-start;border:1px solid var(--border);border-radius:12px;padding:1rem 1.1rem;background:var(--surface);font-size:.92rem;color:var(--secondary)}
+.n-list li strong{display:block;color:var(--foreground);font-weight:550;margin-bottom:.2rem}
+.n-list li::before{content:'';flex:0 0 18px;height:18px;margin-top:2px;border-radius:50%;background:var(--lima) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230b0d08' stroke-width='3'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/12px no-repeat}
+.n-price{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:2rem}
+.n-plan{border:1px solid var(--border);border-radius:16px;padding:1.6rem;background:var(--surface);min-width:0}
+.n-plan.pick{border-color:var(--lima);box-shadow:0 0 0 1px #c6f13530,0 20px 60px #c6f1350d}
+.n-plan h3{font-size:1.15rem}
+.n-amount{font-size:clamp(2rem,5vw,2.8rem);font-weight:600;letter-spacing:-.04em;margin-top:.8rem;line-height:1.1}
+.n-amount span{display:block;font-size:1rem;font-weight:500;letter-spacing:0;color:var(--secondary);margin-top:.35rem}
+.n-plan ul{padding-left:1.1rem;margin:1rem 0 0;color:var(--secondary);font-size:.9rem}
+.n-plan li+li{margin-top:.35rem}
+.n-plan .button{margin-top:1.3rem;width:100%}
+.n-pill{display:inline-block;font-size:.65rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--lima);color:var(--lima-ink);padding:.3rem .55rem;border-radius:6px;margin-bottom:.8rem}
+.n-guarantee{margin-top:2rem;border:1px solid #c6f13560;border-radius:16px;padding:clamp(1.4rem,4vw,2.4rem);background:linear-gradient(130deg,#c6f13514,#111317 60%)}
+.n-guarantee h3{font-size:clamp(1.4rem,3vw,2rem);color:var(--lima)}
+.n-guarantee p{color:#d6dae1;margin-top:.8rem;max-width:44rem}
+.n-math{margin-top:1.5rem;font-size:.85rem;color:var(--subtle)}
+/* Formulario */
+.lead-box{border:1px solid var(--border);border-radius:18px;background:var(--surface);padding:clamp(1.3rem,4vw,2.4rem);max-width:40rem}
+.lead-form{display:grid;gap:1rem;margin-top:1.4rem}
+.lead-form label{display:grid;gap:.4rem;font-size:.84rem;color:#d6dae1}
+.lead-form input,.lead-form textarea,.lead-form select{width:100%;min-height:48px;padding:.75rem .9rem;border-radius:10px;border:1px solid var(--border-strong);background:#0b0c0f;color:var(--foreground);font-size:16px}
+.lead-form textarea{min-height:96px;resize:vertical}
+.lead-form input:focus,.lead-form textarea:focus{outline:2px solid var(--lima);outline-offset:1px;border-color:transparent}
+.lead-form .check{display:flex;gap:.7rem;align-items:flex-start;font-size:.82rem;color:var(--secondary)}
+.lead-form .check input{width:20px;min-height:20px;height:20px;flex:0 0 20px;margin-top:2px;accent-color:var(--lima)}
+.lead-form .check a{color:var(--foreground)}
+.lead-form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.lead-form button{min-height:52px;border:0;border-radius:10px;font-size:1rem}
+.lead-form button[disabled]{opacity:.6;cursor:wait}
+.lead-error{color:#ff9a8a;font-size:.85rem;min-height:1.2em}
+.lead-thanks h3{font-size:1.5rem;color:var(--lima)}
+.lead-thanks p{color:var(--secondary);margin-top:.6rem}
+.lead-thanks .button{margin-top:1.2rem}
+@media(max-width:760px){.n-scene,.n-steps,.n-list,.n-price{grid-template-columns:1fr}.n-hero .button-row .button{width:100%}}
